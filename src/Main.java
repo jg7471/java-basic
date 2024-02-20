@@ -6,4 +6,3 @@ public class Main {
         System.out.println("하이");
         System.out.println();
     }
---
