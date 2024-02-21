@@ -17,11 +17,13 @@ public class LoopExample {
         // 1 ~ 10까지 누적합계 구하기
         int i = 1; //시작값
         int total = 0;
+
         while (i <= 10) { //end
             total += i;
             i++; //step
         }
         System.out.println("total = " + total);
+
         //1 ~ 60000 까지의 정수 중 136의 배수의 개수
         int count = 0;
         for (int j = 1; j <= 60000; j++) {

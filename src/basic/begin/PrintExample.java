@@ -43,7 +43,7 @@ public class PrintExample {
         // %.[자리수를 지정하는 숫자] - _ 원하는 자리수까지 표현
         // %라는 문자 자체를 표현할 때는 %% 쓰면 됨
        double rate = 64.126;
-        System.out.printf("합격률: %.2f%%f", rate); //f 빼먹음
+        System.out.printf("합격률: %.2f%%", rate); //f 빼먹음
 
     }
 }

@@ -1,6 +1,5 @@
-package constate;
+package basic.constate;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class IfExample {

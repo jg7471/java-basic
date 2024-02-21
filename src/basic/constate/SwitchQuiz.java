@@ -1,4 +1,4 @@
-package constate;
+package basic.constate;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class SwitchQuiz {
         System.out.print("정수 1:");
         int num1 = sc.nextInt();
 
-        System.out.println("연산 선택[+-*/]");
+        System.out.println("연산 선택[+, -, *, /]: ");
         String operator = sc.next();
 
         System.out.println("정수 2:");
@@ -43,8 +43,9 @@ public class SwitchQuiz {
                 }
                 result = num1 / num2;
                 break;
+
             default:
-                System.out.println("연산기호를 정확히 입력하세요");
+                System.out.println("연산 기호를 정확하게 입력하세요. [+, -, *, /]");
         }
         if(!flag){
         System.out.printf("%d %s %d = %d\n", num1, operator, num2, result);

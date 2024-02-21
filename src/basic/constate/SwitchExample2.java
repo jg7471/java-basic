@@ -1,4 +1,4 @@
-package constate;
+package basic.constate;
 
 import java.util.Scanner;
 
