@@ -1,4 +1,4 @@
-package array;
+package arrayJG;
 
 public class EnhancedForLoop {
 

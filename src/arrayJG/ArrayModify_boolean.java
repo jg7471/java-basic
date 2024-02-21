@@ -1,8 +1,8 @@
-package array;
+package arrayJG;
 
 import java.util.Scanner;
 
-public class ArrayModify {
+public class ArrayModify_boolean {
     public static void main(String[] args) {
 
         String[] foods = {"삼겹살", "족발", "피자", "햄버거"};
@@ -23,7 +23,8 @@ public class ArrayModify {
         for (int i = 0; i < foods.length; i++) { //인덱스 탐색
             if (name.equals(foods[i])) {
                 System.out.println("탐색완료, 인덱스" + i); // 빼기
-                flag = true; //방법3
+                flag = true; //방법3 : 탐색완료면 즉시 종료
+                //깃발 변수 //기본적으로 false 인데 하나라도 찾을 시 깃발을 들어라
                 break;
             }
             // 미니 quiz 값 입력시 없는 값 찾기

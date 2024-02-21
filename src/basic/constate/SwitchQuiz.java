@@ -39,6 +39,7 @@ public class SwitchQuiz {
                 if(num2 == 0){
                     System.out.println("0으로 나눌 수 없습니다");
                     flag = true;
+                    //깃발 변수 //기본적으로 false 인데 하나라도    찾을 시 깃발을 들어라
                     break;
                 }
                 result = num1 / num2;
