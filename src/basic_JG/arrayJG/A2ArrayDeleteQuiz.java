@@ -37,20 +37,30 @@ public class A2ArrayDeleteQuiz {
                     break;
                 }
             }
-            // 삭제 여부 확인
-            if(index != -1){
-                System.out.println(kakao[index]+"의 이름을 삭제합니다");
+            // 삭제 여부 확인 //{"무지", "네오", "어피치", "라이언", "춘식이"}; 01234
+            if(index != -1){ //ex 어피치[2]
+                System.out.println(kakao[index]+"의 이름을 삭제합니다"); //ex 어피치
+                //System.out.println("index : "+index);//ex 2
 
                 //삭제 알고라줌
                 for(int i = index; i < kakao.length-1; i++){ //마지막 요소 빼기 위해
-                    kakao[i] = kakao[i+1];
+                    kakao[i] = kakao[i+1]; // 덮어 씌움
+                    //System.out.println("index in for"+index);//ex 2
+                    //System.out.println("kakao : "+Arrays.toString(kakao));//ex [무지, 네오, <라이언>, 라이언, 춘식이]
                 }
                 String[] temp = new String[kakao.length-1];
+                //System.out.println("temp : "+Arrays.toString(temp));//[null, null, null, null]
+
 
                 for(int i = 0; i < temp.length; i++){
                     temp[i] = kakao[i];
+                    //System.out.print("2nd kakao[i]"+kakao[i]);
+                    //System.out.print("2nd temp[i]"+temp[i]);
                 }
                 kakao = temp; temp = null;
+                //System.out.print("2nd kakao"+kakao);
+                //System.out.print("2nd temp"+temp);
+
                 System.out.println("$ 삭제 후 정보 : " + Arrays.toString(kakao));
 
             }else {
