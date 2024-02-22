@@ -48,7 +48,7 @@ public class SwitchQuiz {
             default:
                 System.out.println("연산 기호를 정확하게 입력하세요. [+, -, *, /]");
         }
-        if(!flag){
+        if(!flag){//flag false라는 의미
         System.out.printf("%d %s %d = %d\n", num1, operator, num2, result);
         }
         sc.close();

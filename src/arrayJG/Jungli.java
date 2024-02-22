@@ -89,7 +89,7 @@
 //
 //            if(name.equals("그만")){//자바 Style 문자열 비교only
 //        names[i] = name;
-//        for(String n : names) // 자바 style for of 문
+//        for(String n : names) // 자바 style for of 문 //전체 조회만 됨
 //
 //        double avg = (double) total / scores.length;
 //        System.out.printf("총점 : %d점, 평균 %.2f점", total, avg); // print로 했더니 오류 발생
@@ -103,6 +103,6 @@
 //
 //                boolean flag = false;
 //                flag = true;
-//                if(!flag)
+//                if(!flag) //flag false라는 의미
 //    }
 //

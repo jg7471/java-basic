@@ -15,7 +15,7 @@ public class EnhancedForLoop {
          */
         String[] week = {"월", "화", "수", "목", "금", "토", "일"};
         for (String day : week) {
-            System.out.println(day + "요일 안조아");
+            System.out.println(day + "요일 안조아"); //전체조회 밖에 안됨
         }
 
         System.out.println("----------------------------");
