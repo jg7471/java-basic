@@ -14,7 +14,7 @@ public class A3MethodExample3 {
 
     static void multi(int n1, int n2) { // void 메서드 에서만 사용 가능 : return 값이 없다
         int result = n1 * n2;
-        System.out.printf("%d x %d = %d\n", n1, n2, result);
+        System.out.printf("multi %d x %d = %d\n", n1, n2, result);
     }
 
     static void divide(int n1, int n2){
@@ -24,7 +24,7 @@ public class A3MethodExample3 {
             //continue/break 사용 불가
         }
         int result = n1 / n2;
-        System.out.printf("%d / %d = %d\n",n1, n2, result);
+        System.out.printf("divide %d / %d = %d\n",n1, n2, result);
         // return 노필요?@@@
     }
 

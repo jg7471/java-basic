@@ -45,9 +45,9 @@ public class A2MethodExample2 {
     public static void main(String[] args) {
 
         int result = calcRangeTotal(34, 96);
-        System.out.println("result = "+result);
+        System.out.println("calcRangeTotal result = "+result);
 
-        System.out.println("오늘의 점심?"+selectRandomFood());
+        System.out.println("selectRandomFood 오늘의 점심?"+selectRandomFood());
 
         int[] arr = {10, 30, 50, 70, 80, 110, 130};
         int total = clacNumberTotal(arr);//방법1 :재활용 가능
@@ -60,6 +60,10 @@ public class A2MethodExample2 {
         // 배열로 포장해도 됨
         total = clacNumberTotal2(1,23,456,456,489,456,123,1,2,4,23,23,4,3);
         System.out.println("total = " + total);
+
+        System.out.println("clacNumberTotal2"+clacNumberTotal2(213,123,4,3245,23,523,523,234,24));
+
+
         
         /*
         # 매개 변수 (parameter, argument)
