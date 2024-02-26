@@ -16,6 +16,7 @@ public class MainClass {
         //System.out.printf("내 생일은 %년 %월 %일 입니다.\n",my.getYear("aaa111"), my.getMonth(), my.getDay());
 
 
+        // 랄랄라
 
     }
 
