@@ -21,10 +21,10 @@ public class StringQuiz {
             System.out.println(">");
             String ssn = sc.next();
 
-            if(ssn.indexOf("-") == -1) {
+            if(ssn.indexOf("-") == -1) { //1번째 조건
                 System.out.println("'-'을 포함해서 입력하세요");
                 continue;
-            } else if(ssn.length() != 14){
+            } else if(ssn.length() != 14){ //else if 2번째 조건
                 System.out.println("주민등록번호는 13자리 입니다.");
                 continue;
             }
@@ -35,16 +35,18 @@ public class StringQuiz {
             String month = ssn.substring(2,4);
             String day = ssn.substring(4,6);
 
-            if(c == '1' || c == '2') { //c.equals 불가 ->기본타입 == 비교 가능(String 아님)
-                year += 1900;
+            if(c == '1' || c == '2') { //c.equals 불가 ->char은 기본타입 == 비교 가능(.equals은 String)
+                //c == 1||2 잘 못 적음
+                year += 1900; //int age = year+1900; 이렇게 적음
             } else {
                 year += 2000;
             }
 
             int age = 2024 - year;
+
             String gender;
             if(c == '1' || c == '3'){
-                gender = "남자";
+                gender = "남자"; //String gender = "남성"; 이렇게 적음
             } else {
                 gender = "여자";
             }

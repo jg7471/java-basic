@@ -21,7 +21,9 @@ public class MainClass {
         // 다른 패키지 내의 같은 이름을 가진 클래스 객체를 생성할 때는
         // 반드시 패키지 경로를 직접 명시해야 함
 
+
         Apple a = new Apple(); //alt enter import 가져오기(상단에 다 가져와짐)
+
         oop_JG.A04pac.juice.Apple a2 = new oop_JG.A04pac.juice.Apple(); //juice의 Apple, 나중에 생성된 애가 패키지 이름
         //이름이 같아 풀네임
 

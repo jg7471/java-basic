@@ -2,12 +2,11 @@ package oop_JG.A03constructor;
 
 public class Bread {
 
-    //내가 작성
     String name;
     int price;
     String ingredient;
 
-        /*
+        /* 내가 작성
         String breadName = "피자빵";
         int price = 1000;
         String ingredient = "밀가루";
@@ -45,9 +44,9 @@ public class Bread {
         //매개값을 받는 여러 생성자를 이용할 수 있지만, 기본 형태로 생성되어야 할 일도 있기 때문
 
         //alt insert 생성자로 this로 생성 가능(굳이 개별 이름 안짓고도)
-//        breadName = name;
-//        price = price;
-//        ingredient = ingredient;
+        //price = price;
+        //ingredient = ingredient;
+        //breadName = name;
             this.name = name;
             this.price = price;
             this.ingredient = ingredient;
