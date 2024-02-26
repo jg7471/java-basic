@@ -1,8 +1,9 @@
-package oop_JG.A10encap.good;
+package oop_JG.A07encap.good;
 
 public class MainClass {
     public static void main(String[] args) {
 
+        //기본생성자 생성
         MyBirth my = new MyBirth();
         //my.year = 232343244; //직접 생성 막음 //정확, 틀린 값 모두 부정
         //my.year = 1992;(x)

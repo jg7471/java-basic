@@ -1,4 +1,4 @@
-package oop_JG.A10encap.bad;
+package oop_JG.A07encap.bad;
 
 public class MainClass {
 

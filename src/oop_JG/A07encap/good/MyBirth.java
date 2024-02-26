@@ -1,7 +1,4 @@
-package oop_JG.A10encap.good;
-
-import java.awt.*;
-import java.security.PublicKey;
+package oop_JG.A07encap.good;
 
 public class MyBirth {
 
