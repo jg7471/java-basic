@@ -1,4 +1,4 @@
-package oop_JG.A02String;
+package oop_JG.A02string;
 
 public class User {
     String id;

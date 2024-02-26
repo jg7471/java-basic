@@ -3,6 +3,25 @@ package oop_JG.A05this_super;
 public class Warrior extends Player {
 
     int rage;
+
+    public Warrior(String name) {
+        //alt insert 자동 생성자
+        //모든 생성자에는 super()가 내장되어 있음
+        //자식 객체가 생성될 때는 부모의 객체도 생성이 되어야
+        //부모의 속성과 기능이 실존하게 되고, 물려줄 수 있기 때문
+
+//        Player() { //기본 호출값1
+//            System.out.println("Player의 기본 생성자 호출");
+//            this.level = 1;
+//            this.atk = 3;
+//            this.hp = 50; //고대로 물려 받음
+
+        super(name);//부모의 생성자가 대신 초기화 해줌01     //ctrl 누르고 클릭
+        //this.name = name;//필요없어짐 01
+        this.rage = 60; //요거만 직접처리함 //기본생성자가 기본스탯 //2번생성자가 닉네임 저장
+    }
+
+
     @Override
      void characterInfo(){        //부모 물려준건 기본+@
         super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출

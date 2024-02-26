@@ -1,4 +1,4 @@
-package oop_JG.A02String;
+package oop_JG.A02string;
 
 import java.util.Arrays;
 
