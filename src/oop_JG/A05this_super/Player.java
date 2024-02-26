@@ -13,7 +13,7 @@ public class Player {
     int hp;
 
 
-    Player() { //기본 호출값1
+    Player() { //기본 호출값1 : 생성자
         System.out.println("Player의 기본 생성자 호출");
         this.level = 1;
         this.atk = 3;
@@ -23,20 +23,20 @@ public class Player {
         //hp = 50;
     }
 
-    Player(String name/*pName*/){ //값에 따라 호출값 2
+    Player(String name/* p2 name 새로 작성*/){ //값에 따라 호출값 2
         this();//내 다른 생성자 부르는 문법 //매개값 안 받겠다(level, atk, hp 기본대로 감)
         //System.out.println("Player 2번 생성자 호출");
         //System.out.println("생성자에서 this의 주소값: "+ this); //주소값 같다
 //        level = 1;
 //        atk = 3;
 //        hp = 50;
-        this.name = name; //this 생성되는 그 객체 //초기화됨
-        //생성자를 호출한 그 객제 this = p2.kim(플레이어2)
-        /*pName*/; //name = name오류 :::: /name = pName*/ 요렇게 하면 되긴함
+        this.name = name; //this 생성되는 그 객체 : name값 p2에서 받음 //초기화됨
+        //생성자를 호출한 그 객제 this = p2 : 플레이어2
+        //name = name오류 시 -> name = pName*/ 요렇게 하면 되긴함
     }
 
 
-    Player(String name, int hp){
+    Player(String name, int hp){//3번째 생성자
         this(name);//기본생성자 값 호출 //다른 생성자의 호출은 생성자 내에서 항상 최상단에 위치해야함
         System.out.println("Player의 3번 생성자 호출");
         //this.name = name; this에 집어 넣음
@@ -47,7 +47,6 @@ public class Player {
     void attack(Player target){ //Player 객체 받음
 //        System.out.println("때리는 애 = " + this.name);
 //        System.out.println("맞는 애 = " + target.name);
-        System.out.println("----------------------");
         if(this == target){
             System.out.println("스스로는 때릴 수 없어요");
             return;//종료

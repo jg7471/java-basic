@@ -1,4 +1,4 @@
-package oop_JG.A09modi.constructor.pac1;
+package oop_JG.A06modi.constructor.pac1;
 
 public class B {
 

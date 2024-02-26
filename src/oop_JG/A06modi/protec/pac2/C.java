@@ -1,6 +1,6 @@
-package oop_JG.A09modi.protec.pac2;
+package oop_JG.A06modi.protec.pac2;
 
-import oop_JG.A09modi.protec.pac1.*;
+import oop_JG.A06modi.protec.pac1.*;
 
 public class C extends A { //상속받는다
 

@@ -9,6 +9,6 @@ public class Customer {
 
 
     void hello() {
-        System.out.println(name + "です！♥　こんにちはオパ！会いたいかったよ \n"+ city +"出身で"+ age+"生まれ、背は" + height + "センチです。.\n 僕の趣味は"+hobby+"です。これこそよろしくね★");
+        System.out.println(name +  city + age + height + hobby);
     }
 }

@@ -1,4 +1,4 @@
-package oop_JG.A09modi.cls.pac1;
+package oop_JG.A06modi.cls.pac1;
 
 /*
     - default(package friendly) 제한자는 접근 제한자를

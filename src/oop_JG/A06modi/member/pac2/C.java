@@ -1,6 +1,6 @@
-package oop_JG.A09modi.member.pac2;
+package oop_JG.A06modi.member.pac2;
 
-import oop_JG.A09modi.member.pac1.A;
+import oop_JG.A06modi.member.pac1.A;
 
 public class C {
     public C(){

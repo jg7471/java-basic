@@ -20,7 +20,7 @@ public class MainClass {
         w2.characterInfo();
 
         Mage w3 = new Mage();
-        w3.name = "Jaina Proudmoore";
+        w3.name = "Jaina";
         w3.level = 65;
         w3.atk = 760;
         w3.hp = 2000;

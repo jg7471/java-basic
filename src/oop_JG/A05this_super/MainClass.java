@@ -15,13 +15,13 @@ public class MainClass {
 
         System.out.println("-----------------------------");
 
-        Player p3 = new Player("플레이어3", 100);
+        Player p3 = new Player("플레이어3", 100);//3번째 생성자
         p3.characterInfo();
 
         System.out.println("-----------------------------");
         p1.attack(p2); //p1 this //p2 target
         p2.attack(p3);
-        p3.attack(p1); //??? @@@
+        p3.attack(p1);
 
         System.out.println("-----------------------------");
         Warrior w1 = new Warrior("전사짱짱맨");

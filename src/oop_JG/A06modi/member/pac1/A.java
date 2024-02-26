@@ -1,6 +1,4 @@
-package oop_JG.A09modi.member.pac1;
-
-import java.lang.reflect.Method;
+package oop_JG.A06modi.member.pac1;
 
 public class A {
     public int x;

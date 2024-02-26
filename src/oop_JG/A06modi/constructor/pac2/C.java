@@ -1,6 +1,6 @@
-package oop_JG.A09modi.constructor.pac2;
+package oop_JG.A06modi.constructor.pac2;
 
-import oop_JG.A09modi.constructor.pac1.A;
+import oop_JG.A06modi.constructor.pac1.A;
 
 public class C {
 

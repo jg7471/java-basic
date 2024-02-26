@@ -31,25 +31,30 @@ public class Bread {
          */
 
 
-    Bread() {} //기본 생성자를 자동으로 만들어 주는 것은 생성자가 하나도 선언되어 있지 않을 때만
+
+
+    //Bread(String pModel, int pPrice, String pIngre){
+    //생성자가 아예 없으면 기본생성자 만들어줌
+    //생성자 있을시 아래를 통해서 생성됨->빈 생성자 성생해줘야함
+    //빈 기본생성자 있어야함
+    //매개값을 아무것도 받지 않는 기본 생성자는 클래스 내에 존재하는 편이 좋다
+    //매개값을 받는 여러 생성자를 이용할 수 있지만, 기본 형태로 생성되어야 할 일도 있기 때문
+    Bread() {}//생성자 한개 있을 때는 BreadMain에서 값 설정 불가 : 값 설정을 위해 고의로 작성함(권장★★★★★)
+    //기본 생성자를 자동으로 만들어 주는 것은 생성자가 하나도 선언되어 있지 않을 때만
     //자동으로 생성됨
 
 
+
         public Bread(String name, int price, String ingredient) {
-        //Bread(String pModel, int pPrice, String pIngre){
-        //생성자가 아예 없으면 기본생성자 만들어줌
-        //생성자 있을시 아래를 통해서 생성됨->빈 생성자 성생해줘야함
-        //빈 기본생성자 있어야함
-        //매개값을 아무것도 받지 않는 기본 생성자는 클래스 내에 존재하는 편이 좋다
-        //매개값을 받는 여러 생성자를 이용할 수 있지만, 기본 형태로 생성되어야 할 일도 있기 때문
+            this.name = name;
+            this.price = price;
+            this.ingredient = ingredient;
+
 
         //alt insert 생성자로 this로 생성 가능(굳이 개별 이름 안짓고도)
         //price = price;
         //ingredient = ingredient;
         //breadName = name;
-            this.name = name;
-            this.price = price;
-            this.ingredient = ingredient;
     }
 
     void info() {

@@ -1,4 +1,4 @@
-package oop_JG.A09modi.cls.pac1;
+package oop_JG.A06modi.cls.pac1;
 
 // public 제한자는 접근 제한 자체가 없는 형태(어디에서나 사용 가능)
 public class B {

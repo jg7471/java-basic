@@ -8,7 +8,7 @@ public class Mage extends Player {
         this.mana = 100;
     }
 
-    @Override //alt insert //charcter info void
+    @Override
     void characterInfo() {
         super.characterInfo();
         System.out.println("# 마나: " + mana);

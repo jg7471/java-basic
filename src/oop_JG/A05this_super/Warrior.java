@@ -1,5 +1,13 @@
 package oop_JG.A05this_super;
+/*
+# 자식 클래스, 하위 클래스 (Child, Sub class)
 
+- 부모 클래스로부터 멤버변수(필드)와 메서드를 물려받는 클래스를
+ 자식 클래스라고 합니다.
+
+- 상속을 적용시키려면 자식 클래스 선언부의 클래스 이름 뒤에
+ 키워드 extends를 쓰고, 물려받을 부모 클래스의 이름을 적으시면 됩니다.
+*/
 public class Warrior extends Player {
 
     int rage;
@@ -18,24 +26,15 @@ public class Warrior extends Player {
 
         super(name);//부모의 생성자가 대신 초기화 해줌01     //ctrl 누르고 클릭
         //this.name = name;//필요없어짐 01
-        this.rage = 60; //요거만 직접처리함 //기본생성자가 기본스탯 //2번생성자가 닉네임 저장
+        this.rage = 999; //요거만 직접처리함 //기본생성자가 기본스탯 //2번생성자가 닉네임 저장
     }
 
 
-    @Override
-     void characterInfo(){        //부모 물려준건 기본+@
+    @Override//alt insert //charcter info void
+     void characterInfo(){ //Player의 함수 ***캐릭터 정보***
         super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출
-        System.out.println("# 분노:" + rage); //warrior 固有特徴
+        System.out.println("# 분노:" + rage); //warrior 固有特徴 출력!
     }
-    /*
-    # 자식 클래스, 하위 클래스 (Child, Sub class)
-
-    - 부모 클래스로부터 멤버변수(필드)와 메서드를 물려받는 클래스를
-     자식 클래스라고 합니다.
-
-    - 상속을 적용시키려면 자식 클래스 선언부의 클래스 이름 뒤에
-     키워드 extends를 쓰고, 물려받을 부모 클래스의 이름을 적으시면 됩니다.
-    */
 
 
      /*

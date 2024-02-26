@@ -1,4 +1,4 @@
-package oop_JG.A09modi.protec.pac1;
+package oop_JG.A06modi.protec.pac1;
 
 public class B {
 
