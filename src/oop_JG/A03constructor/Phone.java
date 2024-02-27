@@ -2,6 +2,8 @@ package oop_JG.A03constructor;
 
 public class Phone {
 
+    //1번 생성자 값 세팅
+
         //보통 여기에 값 대입 안넣음 : 생성자가 하기 때문에
         //변수 선언은 함
         String model;

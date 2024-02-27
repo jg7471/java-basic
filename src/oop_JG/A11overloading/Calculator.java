@@ -52,7 +52,7 @@ public class Calculator {
 
     //내가 작성
     /*
-        static int Calculator(int a){ //@@@static, void 붙이는거 차이?
+        static int Calculator(int a){ //@@static, void 붙이는거 차이?
             int total = 0;
             return total = a*a;
         }

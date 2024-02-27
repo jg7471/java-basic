@@ -43,12 +43,26 @@ public class MainClass {
         kim.drive(t3);
 
         System.out.println("------------------------------");
-        Car myTesla = kim.buyCar("포르쉐");// 다형성 적용
-        myTesla.run();
+        //Car myTesla = kim.buyCar("포르쉐");// 다형성 적용
+        //myTesla.run();
         //myTesla.activeAutopilot(); //다형성의 한계 : myTeslad의 부모가 Car라서 : 부모가 알 수 없는 정보 : 자식이 확장한 개념
 
+        //방법1
+        //Tesla t = (Tesla) myTesla; //자식t 부모myTesla 강제 형변환
+        //t.activeAutopilot();
+        //부모타입 필요할 때
+
+        System.out.println("------------------------------");
+        //방법2
+        Tesla myTesla = (Tesla) kim.buyCar("테슬라");// 다형성 적용
+        myTesla.run();
+        myTesla.activeAutopilot();
 
 
+        CarShop shop = new CarShop();
+        shop.carPrice(s2);
+        shop.carPrice(t4);
+        shop.carPrice(p1);
 
 
     }

@@ -25,7 +25,7 @@ public class A3MethodExample3 {
         }
         int result = n1 / n2;
         System.out.printf("divide %d / %d = %d\n",n1, n2, result);
-        // return 노필요?@@@
+        // return 노필요?@@ -> 그래로 결과값 반환, 위의 if는 0으로 나눌 수 없으므로 return(break)
     }
 
 

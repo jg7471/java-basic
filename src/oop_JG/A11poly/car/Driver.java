@@ -5,8 +5,6 @@ import java.sql.SQLOutput;
 public class Driver {
 
 
-
-
         public void drive (Car c){ // 매개변수 부모타입으로 작성
             System.out.println("운전을 시작합니다");
             c.run();

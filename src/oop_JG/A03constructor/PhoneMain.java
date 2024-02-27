@@ -3,7 +3,7 @@ package oop_JG.A03constructor;
 import java.util.Scanner;
 
 public class PhoneMain {
-
+//메인 = 출력
     public static void main(String[] args) {
 
         //Scanner sc =new Scanner() 생성자

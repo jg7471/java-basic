@@ -2,7 +2,7 @@ package oop_JG.A12obj_arr;
 
 public class Person {
 
-    //private 직접 붙이고 1 //@@@ 여기 왜 private? 요게 정석?->ㅇㅇ 보안
+    //private 직접 붙이고 1 //@@ 여기 왜 private? 요게 정석?->ㅇㅇ 보안
     private String name;
     private int age;
     private String gender;

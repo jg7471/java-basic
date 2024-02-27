@@ -1,4 +1,4 @@
-package oop_JG.A11poly.car.casting;
+package oop_JG.A11poly.casting;
 
 public class Parent {
 

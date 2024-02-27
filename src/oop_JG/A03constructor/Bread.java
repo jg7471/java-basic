@@ -2,11 +2,39 @@ package oop_JG.A03constructor;
 
 public class Bread {
 
+    //속성 세팅
     String name;
     int price;
     String ingredient;
 
-        /* 내가 작성
+    //1번 생성자
+    Bread() {}//생성자 한개 있을 때는 BreadMain 에서 값 설정 불가 : 값 설정을 위해 고의로 작성함(권장★★★★★)
+    //기본 생성자를 자동으로 만들어 주는 것은 생성자가 하나도 선언되어 있지 않을 때만
+    //자동으로 생성됨
+
+
+    //2번생성자
+        public Bread(String name, int price, String ingredient) {
+            this.name = name;
+            this.price = price;
+            this.ingredient = ingredient;
+
+
+        //alt insert 생성자로 this로 생성 가능(굳이 개별 이름 안짓고도)
+        //price = price;
+        //ingredient = ingredient;
+        //breadName = name;
+    }
+
+    void info() {
+        System.out.println("*** 빵 정보 ***");
+        System.out.println("이름: " + name);
+        System.out.println("가격: " + price + "원");
+        System.out.println("주 재료: " + ingredient);
+    }
+
+
+      /* 내가 작성
         String breadName = "피자빵";
         int price = 1000;
         String ingredient = "밀가루";
@@ -39,30 +67,4 @@ public class Bread {
     //빈 기본생성자 있어야함
     //매개값을 아무것도 받지 않는 기본 생성자는 클래스 내에 존재하는 편이 좋다
     //매개값을 받는 여러 생성자를 이용할 수 있지만, 기본 형태로 생성되어야 할 일도 있기 때문
-    Bread() {}//생성자 한개 있을 때는 BreadMain에서 값 설정 불가 : 값 설정을 위해 고의로 작성함(권장★★★★★)
-    //기본 생성자를 자동으로 만들어 주는 것은 생성자가 하나도 선언되어 있지 않을 때만
-    //자동으로 생성됨
-
-
-
-        public Bread(String name, int price, String ingredient) {
-            this.name = name;
-            this.price = price;
-            this.ingredient = ingredient;
-
-
-        //alt insert 생성자로 this로 생성 가능(굳이 개별 이름 안짓고도)
-        //price = price;
-        //ingredient = ingredient;
-        //breadName = name;
-    }
-
-    void info() {
-        System.out.println("*** 빵 정보 ***");
-        System.out.println("이름: " + name);
-        System.out.println("가격: " + price + "원");
-        System.out.println("주 재료: " + ingredient);
-    }
-
-
 }

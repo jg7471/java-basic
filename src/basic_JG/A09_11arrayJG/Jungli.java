@@ -53,11 +53,11 @@
 //
 //        int rn = (int) (Math.random() * 355 + 42); //42 ~ 396사이의 난수
 //        int rn = (int) (Math.random() * 10 + 1); //1~10
-//        int rn2 = (int) (Math.random() * 91 + 10); //10~100 @@@
+//        int rn2 = (int) (Math.random() * 91 + 10); //10~100 @@
 //
 //        boolean flag = false;
 //        if (!flag) {
-//            System.out.println("flag = " + flag);//false ?@@@
+//            System.out.println("flag = " + flag);//false ?@@
 //        }
 //
 //

@@ -34,6 +34,15 @@ public class MyBirth {
 //    } IDM에서 제공해줌
 
 
+
+
+
+
+    // set get 반복 년월일 취득
+
+
+
+
     public void setYear(int year) {//alt insert에서 제공해줌 //or sety만 해도 추천검색어 뜸
         if (year < 1900 || year > 2024) {
             System.out.println("잘못된 연도입니다.");

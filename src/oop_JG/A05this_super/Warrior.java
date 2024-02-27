@@ -12,7 +12,7 @@ public class Warrior extends Player {
 
     int rage;
 
-    public Warrior(String name) {
+    public Warrior(String name) { //@@@
         //alt insert 자동 생성자
         //모든 생성자에는 super()가 내장되어 있음
         //자식 객체가 생성될 때는 부모의 객체도 생성이 되어야
@@ -30,7 +30,8 @@ public class Warrior extends Player {
     }
 
 
-    @Override//alt insert //charcter info void
+    //출력?@@@
+    @Override//alt insert //charcter //메서드 재정의 info void
      void characterInfo(){ //Player의 함수 ***캐릭터 정보***
         super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출
         System.out.println("# 분노:" + rage); //warrior 固有特徴 출력!

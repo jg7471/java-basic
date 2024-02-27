@@ -6,7 +6,7 @@ package oop_JG.A06modi.cls.pac1;
 * */
 
 
-class A { //default?? @@@
+class A { //default?? @@
 
     B b = new B(); // public 누구나 접근 가능
 

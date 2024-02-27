@@ -3,6 +3,9 @@ package oop_JG.A05this_super;
 public class MainClass {
     public static void main(String[] args) {
 
+        //메인 : 생성자 출력
+        //메인 : main 열기
+
         Player p1 = new Player();
         p1.name = "플레이어1";
         p1.characterInfo();
@@ -10,7 +13,7 @@ public class MainClass {
         System.out.println("-----------------------------");
 
         Player p2 = new Player("플레이어2");
-        System.out.println("main에서 p2의 주소값: " + p2);//주소값 같다
+        //System.out.println("main에서 p2의 주소값: " + p2);//주소값 같다
         p2.characterInfo();
 
         System.out.println("-----------------------------");
