@@ -6,7 +6,7 @@ public class MainClass {
     public static void main(String[] args) {
 //원시적
 //        Person kim = new Person("김춘식",32,"남성");
-//        Person lee = new Person("이아영",23,"여성");
+//        Person lee = new Person("이영희",23,"여성");
 //        Person park = new Person("박상성",35,"남성");
 //
 //        kim.personInfo();
@@ -19,9 +19,11 @@ public class MainClass {
         //people[0] = new Person("김춘식",32,"남성");
 
         int[] arr = {1, 3, 5, 7, 9};
+
+        //생성자 호출
         Person[] people ={
                 new Person("김춘식",32,"남성"),
-                new Person("이아영",23,"여성"),
+                new Person("이영희",23,"여성"),
                 new Person("박상성",35,"남성")
         };
         System.out.println(Arrays.toString(people));//주소값 반환

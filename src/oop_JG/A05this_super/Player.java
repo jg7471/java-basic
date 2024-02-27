@@ -40,7 +40,7 @@ public class Player {
         this(name);//기본생성자 값 호출 //다른 생성자의 호출은 생성자 내에서 항상 최상단에 위치해야함
         System.out.println("Player의 3번 생성자 호출");
         //this.name = name; this에 집어 넣음
-//        this.hp = hp;
+//        this.hp = hp; @@@
     }
 
 

@@ -1,32 +1,24 @@
 package oop_JG.A03constructor;
 
 public class Customer {
+
     String name;
     int age;
-    String city;
-    String nationality;
-    String hobby;
+    String hometown;
 
-    Customer() {
-    }
+    Customer(){}
 
-    public Customer(String name,
-                    int age,
-                    String city,
-                    String nationality,
-                    String hobby) {
-
+    public  Customer(String name, String hometown){
         this.name = name;
-        this.age = age;
-        this.city = city;
-        this.nationality = nationality;
-        this.hobby = hobby;
+        this.age = 20040501;
+        this.hometown = hometown;
     }
 
-    void info(){
-        System.out.println("-----GF Data-----");
-        System.out.print("이름"+name+", 나이"+age+", 도시, "+city+", 국적"+nationality+", 취미"+hobby);
-
+    void hello(){
+        System.out.println("name :" + name);
+        System.out.println("age :" + age);
+        System.out.println("hometown :" + hometown);
     }
+
 
 }

@@ -3,20 +3,16 @@ package oop_JG.A03constructor;
 public class CustomerMain {
     public static void main(String[] args) {
 
-        Customer a = new Customer();
-        a.name = "Fujiko";
-        a.age = 23;
-        a.city = "Tokyo";
-        a.nationality = "Japan";
-        a.hobby = "Cooking";
-        a.info();
+        Customer no1 = new Customer();
+        no1.name = "Sakura";
+        no1.age = 20000403;
+        no1.hometown = "Tokyo";
+        no1.hello();
 
-        System.out.println("----------");
-        Customer b = new Customer("Yaxuan", 24, "Shanghai", "China", "Piano");
-        b.info();
+        System.out.println("_______");
+        Customer no2 = new Customer("Sakura", "Osaka");
+        no2.hello();
 
-        System.out.println("----------");
-        Customer c = new Customer("Aling", 24, "Hong Kong", "Hong Kong", "Drawing");
-        c.info();
+
     }
 }
