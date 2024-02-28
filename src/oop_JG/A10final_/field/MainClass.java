@@ -1,5 +1,8 @@
 package oop_JG.A10final_.field;
 
+//마지막 필드 → 더 이상 값의 변경은 없다.
+//method fianl 오버라이딩 막음
+//class fianl 상속 막음
 public class MainClass {
     public static void main(String[] args) {
 
@@ -15,3 +18,4 @@ public class MainClass {
 
     }
 }
+
