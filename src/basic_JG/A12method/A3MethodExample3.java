@@ -31,6 +31,8 @@ public class A3MethodExample3 {
 
     public static void main(String[] args) { //void : return X 선언
         int r1 = add(3, 8); //int r1 = 11
+        //int r1 = A3MethodExample3.add(3, 8); //int r1 = 11 원랜 이렇게 부르는게 정석 Static 있으면 생략가능
+
         int r2 = add(10, 15); //int r2 = 25
         int r3 = add(add(4, 6), add(7, 8));
 

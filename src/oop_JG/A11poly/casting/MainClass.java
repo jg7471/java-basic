@@ -49,7 +49,7 @@ public class MainClass {
 
 
         Child c2 = (Child)p2;//객체 생성 아님(주소값 같다 : 부모타입을 이용해서 접근 한 것뿐)
-        //부모 타입을 자식 타입으로 강제 변환(DownCasting)
+        //부모 타입을 자식 타입으로 강제 변환(DownCasting) // 그대로 Child로 내림
         //p2주소 c2로 옮기라 : 상위p2부모 -> 하위c2자식
         c2.n2 = 2;
         c2.method3();

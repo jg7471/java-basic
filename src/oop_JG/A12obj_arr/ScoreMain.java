@@ -2,6 +2,8 @@ package oop_JG.A12obj_arr;
 
 import java.util.Scanner;
 
+import static oop_JG.A12obj_arr.Score.isValidateScore; //static으로 불러오기
+
 public class ScoreMain {
 
     public static void main(String[] args) {
@@ -52,32 +54,44 @@ public class ScoreMain {
                 break; //마우스 위에 올려둘 시 break 대상 알려줌
             }
 
-            Score s = new Score(); //객체 생성
+            //Score s = new Score(); //객체 생성 : 불러오기 static 붙이면 필요없어짐
 
-
+            /*
             System.out.println("# 국어");
             int kor = sc.nextInt();
             if(!s.isValidateScore(kor)){
                 continue;
             }
+            */
+
+            System.out.println("# 국어");
+            int kor = sc.nextInt();
+            if(!isValidateScore(kor)){
+                continue;
+            }
 
             System.out.println("# 영어");
             int eng = sc.nextInt();
-            if(!s.isValidateScore(eng)){
+            if(!isValidateScore(eng)){
                 continue;
             }
 
             System.out.println("# 수학");
             int math = sc.nextInt();
-            if(!s.isValidateScore(math)){
+            if(!isValidateScore(math)){
                 continue;
             }
 
-            s.setName(name); //private로 가려져서
-            s.setKor(kor);
-            s.setEng(eng);
-            s.setMath(math);
-            s.setTotalAndAvg();
+//            s.setName(name); //private로 가려져서
+//            s.setKor(kor);
+//            s.setEng(eng);
+//            s.setMath(math);
+//            s.setTotalAndAvg();
+
+            Score s = new Score(name, kor, eng, math);
+
+
+
 
             /* 방법1
             int total = kor + eng + math;

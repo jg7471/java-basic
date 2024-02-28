@@ -13,7 +13,10 @@ public class Score {
      - 캡슐화를 구현해서 작성해 주세요. (생성자는 맘대로 하세요.)
     */
 
-
+    //보통 순서
+    //가장 위 필드
+    //생성자
+    //메서드
 
     private String name;
     private int kor;
@@ -21,6 +24,17 @@ public class Score {
     private int math;
     private int total;
     private double average;
+
+    public Score(){}
+
+    public Score(String name, int kor, int eng, int math) {
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+        this.setTotalAndAvg();
+        //객체가 생성되는 순간 바로 계산
+    }
 
     //alt insert = getter, setter 만들기
     public String getName() {
@@ -88,6 +102,18 @@ public class Score {
     }
 
     //점수 유효성 검증
+    //static 추가 : 공용이기 때문에
+    public static boolean isValidateScore(int score){//보통 boolean type 사용시 is+ : 관례 true or false
+        //(int score)매개변수 있어야 함
+        if(score > 100 || score < 0){
+            System.out.println("유효하지 않은 점수입니다. (0~100)");
+            return false;
+        }
+        return true;
+    }
+
+
+    /* 원형
     public boolean isValidateScore(int score){//보통 boolean type 사용시 is+ : 관례 true or false
         //(int score)매개변수 있어야 함
         if(score > 100 || score < 0){
@@ -96,6 +122,7 @@ public class Score {
         }
         return true;
     }
+     */
 }
 
 
