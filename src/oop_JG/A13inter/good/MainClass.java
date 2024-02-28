@@ -2,6 +2,8 @@ package oop_JG.A13inter.good;
 
 import util.Utility;
 
+import static util.Utility.input;
+
 public class MainClass {
     public static void main(String[] args) {
 
@@ -11,7 +13,7 @@ public class MainClass {
 
         System.out.println("진행하실 번호를 입력하세요");
         System.out.println("1. 가입 2. 로그인 3. 정보수정 4. 탈퇴");
-        String menu = Utility.input("> ");
+        String menu = input("> ");
 
         if(menu.equals("1")){
             sv = new Join(); //일일히 변수 선언 안해도 됨
@@ -26,6 +28,8 @@ public class MainClass {
             sv = new Delete();
             sv.execute();
         }
+
+        // Utility.makeLine(); Utility 근처에서 alt enter
 
     }
 

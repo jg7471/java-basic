@@ -1,13 +1,13 @@
 package oop_JG.A13inter.bad;
 
-import util.Utility;
-
+import static util.Utility.input;
 public class MainClass {
     public static void main(String[] args) {
 
         System.out.println("진행하실 번호를 입력하세요");
         System.out.println("1. 가입 2. 로그인 3. 정보수정 4. 탈퇴");
-        String menu = Utility.input("> ");
+        String menu = input("> ");
+
 
         if(menu.equals("1")){
             Join join = new Join(); //객체 생성

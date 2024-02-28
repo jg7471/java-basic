@@ -8,6 +8,6 @@ public class Duck extends Livings { // livings 상속
 
     @Override
     public boolean sleep() {
-        return super.sleep();
+        return false;
     }
 }

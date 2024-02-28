@@ -1,6 +1,5 @@
 package oop_JG.A11overloading;
 
-import java.sql.SQLOutput;
 
 public class MainClass {
         /*

@@ -23,8 +23,9 @@ public class Player {
     }
 
 
-    Player(String name, int hp){//3번째 생성자
+    Player(String name, int hp) {
         this(name);
+        this.hp = hp;
     }
 
 

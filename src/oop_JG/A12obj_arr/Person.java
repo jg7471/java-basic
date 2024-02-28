@@ -8,6 +8,8 @@ public class Person {
     private String gender;
 
     //생성자 생성 alt insert
+    public Person() {}
+
     public Person(String name, int age, String gender) {
         this.name = name;
         this.age = age;
@@ -44,6 +46,8 @@ public class Person {
     public void personInfo(){
         System.out.printf("이름: %s\n나이: %s\n 성별: %s\n",
                 this.name, this.age, this.gender);
+        System.out.println("---------------------------------------");
+
     }
 
 

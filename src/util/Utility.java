@@ -12,6 +12,7 @@ public class Utility {
     public static void makeLine(){
         System.out.println("================================================");
     }
+    //@@@등록 호출 단축키
 
     //문자열을 입력받는 기능
     public static String input(String message){

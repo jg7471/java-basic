@@ -10,7 +10,7 @@ public class BullDog extends Livings implements Violent, Huntable{//상속도 �
 
     @Override
     public boolean sleep() {
-        return super.sleep();
+        return false;
     }
 
     @Override

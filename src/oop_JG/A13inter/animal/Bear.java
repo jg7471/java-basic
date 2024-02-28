@@ -16,4 +16,13 @@ public class Bear extends Livings implements /*Violent, Huntable = 합쳐서 퉁
     public void fight() {
 
     }
+
+    @Override
+    public void feed(String foodName) {
+    }
+
+    @Override
+    public boolean sleep() {
+        return false;
+    }
 }

@@ -21,13 +21,4 @@ public abstract class Livings implements Animal {   //원랜 여기서 구상해
     String name;
     int age;
 
-    @Override
-    public void feed(String foodName) {
-
-    }
-
-    @Override
-    public boolean sleep() {
-        return false;
-    }
 }

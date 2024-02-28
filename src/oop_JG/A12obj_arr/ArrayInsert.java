@@ -1,5 +1,4 @@
 package oop_JG.A12obj_arr;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ArrayInsert {
