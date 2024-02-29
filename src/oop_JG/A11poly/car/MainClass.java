@@ -39,6 +39,9 @@ public class MainClass {
         System.out.println("------------------------------");
         Driver kim = new Driver();
         kim.drive(p1);
+        //Driver public void drive (Car c) // 매개변수 부모타입으로 작성
+        //c.run();
+        // : 운전을 시작합니다 + Porsche : 포르쉐가 달립니다
         kim.drive(s2);
         kim.drive(t3);
 
@@ -54,9 +57,11 @@ public class MainClass {
 
         System.out.println("------------------------------");
         //방법2
-        Tesla myTesla = (Tesla) kim.buyCar("테슬라");// 다형성 적용
+        Tesla myTesla = (Tesla) kim.buyCar("테슬라");// @@@ 다형성 적용 //상->하 형변환
+        //부모는 자식에게 모든걸 주지만, 자식은 아무 것도 줄 수 없음(부모는 자식이 변화 알 수 없음)
         myTesla.run();
         myTesla.activeAutopilot();
+        System.out.println("------------------------------");
 
 
         CarShop shop = new CarShop();

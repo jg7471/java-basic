@@ -60,7 +60,7 @@ public class MainClass {
         //object 타입의 변수는 어떠한 객체든 담을 수 있지만, 객체 고유의 기능을 사용하기 위해서는
         //형 변환이 거의 항상 필요함 -> Object가 물려주는 메서드 자체가 별로 없음(상징적 클래스)
         Object obj = new String("안녕하세요");
-        String str = (String)obj; //상->하 형변환 필요
+        String str = (String)obj; //상->하 형변환 필요(부모->자식)
         System.out.println("문자열의 길이 " + str.length()); // indexOf subString charAt : object는 자식이 얼마나 같고 있는지 모름
 
         //다형성이 한 번도 발생하지 않은 경우에는 강제 형 변환을 사용할 수 없음
