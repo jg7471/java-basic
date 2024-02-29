@@ -30,7 +30,7 @@ public class Warrior extends Player {
     }
 
 
-    //출력?@@@
+    //출력?@@
     @Override//alt insert //charcter //메서드 재정의 info void
      void characterInfo(){ //Player의 함수 ***캐릭터 정보***
         super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출

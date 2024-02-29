@@ -31,7 +31,7 @@ public class MainClass {
         ((Animal)bear).feed("과일"); //badanimal->animal 즉석 형변환 가능
         //bear -> animal 변경 후 -> feed 를 불러와라
         //bear type -> BadAnimal -> feed()에 대한 정보 X ->Animal 타입으로 즉시 형변환 가능
-        // -> Bear 클레스가 결국 Animal과 연관이 있기 때문에...! : @@@ 직접 그려보셈
+        // -> Bear 클레스가 결국 Animal과 연관이 있기 때문에...! : @@ 직접 그려보셈
         // 인터페이스는 형변환이 유연하다 즉시즉시 형변환 가능: 연결만 되어있으면 인터페이스끼리 형변환 가능
 
         Animal[] animals = {duck, (Animal) bullDog, (Animal) shark, (Animal) bear};

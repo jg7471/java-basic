@@ -1,8 +1,9 @@
 package oop_JG.A12abs;
 
 public class Dog extends Pet{ //상속받으려면 메서드 구현 alt insert
-    public Dog(String name, String kind, int age) { //부모의 생성자 호출 ??? @@@
+    public Dog(String name, String kind, int age) { //부모의 생성자 호출 ??? @@
         super(name, kind, age);
+        //기본 생성자
     }
     @Override
     public void takeNap() {

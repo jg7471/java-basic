@@ -15,6 +15,8 @@ public class MainClass {
         //park.nation = "영국"; //xx
         //park.name = "백승호"; //xx
 
+        //(final)String 클래스 자식 만들 수 없음
+
 
     }
 }
