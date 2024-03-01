@@ -9,17 +9,24 @@ public class MainClass {
         Player p1 = new Player();
         p1.name = "플레이어1";
         p1.characterInfo();
+        System.out.println("main에서 p1의 주소값: " + p1);//주소값 다름
 
         System.out.println("-----------------------------");
 
         Player p2 = new Player("플레이어2");
-        //System.out.println("main에서 p2의 주소값: " + p2);//주소값 같다
+        System.out.println("main에서 p2의 주소값: " + p2);//주소값 다름
         p2.characterInfo();
 
         System.out.println("-----------------------------");
 
         Player p3 = new Player("플레이어3", 100);//3번째 생성자
         p3.characterInfo();
+
+
+        System.out.println("-----------------------------");
+        Player p4 = new Player("플레이어4", 50, 999,444);
+        p4.characterInfo();
+
 
         System.out.println("-----------------------------");
         p1.attack(p2); //p1 this //p2 target

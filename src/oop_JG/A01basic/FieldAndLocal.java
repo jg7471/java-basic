@@ -1,6 +1,6 @@
 package oop_JG.A01basic;
 
-public class A3FieldAndLocal {
+public class FieldAndLocal {
     /*
     # 멤버 변수(field, class member variable)
     1. 클래스 블록에 선언된 변수를 의미합니다.
