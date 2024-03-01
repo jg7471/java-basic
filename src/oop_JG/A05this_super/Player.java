@@ -5,16 +5,13 @@ package oop_JG.A05this_super;
 public class Player {
     //생성자 기본값 세팅
     String name;
-    //this.level = 1;
-    //this.atk = 1;
-    //this.hp = 50;
     int level;
     int atk;
     int hp;
 
 
     Player() { //기본 호출값1 : 생성자
-        System.out.println("Player의 기본 생성자 호출");
+        System.out.println("1번)Player의 기본 생성자 호출(기본 생성자 출력값)");
         this.level = 1;
         this.atk = 3;
         this.hp = 50;
@@ -38,14 +35,15 @@ public class Player {
 
     Player(String name, int hp){//3번째 생성자
         this(name);//기본생성자 값 호출 //다른 생성자의 호출은 생성자 내에서 항상 최상단에 위치해야함
-        //@@@ ->Player(String name) 요거 참고하겠다 : 갯수 같음 -> 근데 왜 사용?
-        System.out.println("Player의 3번 생성자 호출");
+        //@@ ->Player(String name) 요거 참고하겠다 : 갯수 같음 -> 근데 왜 사용?
+        System.out.println("2번)GO GO GO!!!");
         //this.name = name; this에 집어 넣음
         this.hp = hp;
     }
 
-    Player(String name, int hp, int atk) {
-        this(name, hp);
+    Player(String name, int level, int hp, int atk) {//4번째 생성자
+        this(name, level);
+        this.hp = hp;
         this.atk = atk;
     }
 
@@ -77,7 +75,7 @@ public class Player {
 
 
     void characterInfo() {
-        System.out.println("***캐릭터 정보***");
+        System.out.println("3번)***캐릭터 정보(void characterInfo())***");
         System.out.println("# 아이디: " + name);//원래는 다 this.붙어야 함
         System.out.println("# 레벨: " + level);
         System.out.println("# 공격력: " + atk);
