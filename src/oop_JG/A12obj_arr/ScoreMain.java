@@ -32,7 +32,7 @@ public class ScoreMain {
          */
 
 
-        Score[] scoreList = new Score[100];
+        Score[] scoreList = new Score[100]; //@@@ Score 타입?
         Scanner sc = new Scanner(System.in);
 
         System.out.println("학생 점수 입력 프로그램");
@@ -88,7 +88,7 @@ public class ScoreMain {
 //            s.setMath(math);
 //            s.setTotalAndAvg();
 
-            Score s = new Score(name, kor, eng, math);
+            Score s = new Score(name, kor, eng, math); //@@@
 
 
 
@@ -100,7 +100,7 @@ public class ScoreMain {
             s.setAverage((avg));
             */
 
-            scoreList[idx] = s; //idx를 이용해서 idx 지목
+            scoreList[idx] = s; //idx를 이용해서 idx 지목 //@@@
             idx++;
 
             System.out.println("***학생 정보 입력 완료***");
