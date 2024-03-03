@@ -26,7 +26,7 @@ public class MainClass {
                 new Person("이영희",23,"여성"),
                 new Person("박상성",35,"남성")
         };
-        System.out.println(Arrays.toString(people));//주소값 반환
+        System.out.println("주소값"+Arrays.toString(people));//주소값 반환
         //Stack(좁은 영역) Heap(넓은 영역)
 
         //비효율
@@ -35,10 +35,10 @@ public class MainClass {
 //        people[2].personInfo();
 
 
-//        for(int i = 0; i < people.length; i++){
+//        for(int i = 0; i < people.length; i++){ //방법1
 //            people[i].personInfo();
 //        }
-        for (Person p : people) { //iter 향상for문(for each문)
+        for (Person p : people) { //방법2 //iter 향상for문(for each문) //객체배열 출력
             p.personInfo();//p.에는 주소값이 오는 것이다 *유의
         }
     }

@@ -147,7 +147,7 @@ public class MyBirth {
     public void birthInfo() {
         //year, month, day 셋 중 단 하나라도 제대로 값이 세팅되지 않았다면
         //출력을 해 주지 않겠다
-        if (this.year == 0 || this.month == 0 || this.day == 0) {
+        if (this.year == 0 || this.month == 0 || this.day == 0) { //@@@
             System.out.println("날짜 필드 중에 초기화 되지 않은 데이터가 있읍니다");
             return;
 

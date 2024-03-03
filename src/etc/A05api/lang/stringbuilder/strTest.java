@@ -1,4 +1,4 @@
-package etc_JG.exception.A05api.lang.stringbuilder;
+package etc.A05api.lang.stringbuilder;
 
 public class strTest {
 

@@ -1,4 +1,4 @@
-package etc_JG.exception.A05api.lang.obj;
+package etc.A05api.lang.obj;
 
 import java.util.Objects;
 

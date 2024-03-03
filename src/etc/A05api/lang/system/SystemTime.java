@@ -1,4 +1,4 @@
-package etc_JG.exception.A05api.lang.system;
+package etc.A05api.lang.system;
 
 public class SystemTime {
     public static void main(String[] args) {

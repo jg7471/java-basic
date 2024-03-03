@@ -1,8 +1,4 @@
-package etc_JG.exception.A2throws;
-
-import jdk.dynalink.beans.StaticClass;
-
-import javax.swing.*;
+package etc.exception.A2throws;
 
 public class ThrowsExample {
 

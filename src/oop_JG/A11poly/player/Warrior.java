@@ -31,7 +31,7 @@ public class Warrior extends Player {
         System.out.printf("%s님이 %s님에게 돌진을 시전했습니다\n", this.name, p.name/*맞는 얘*/);
 
         int damage; String job;
-        if(p instanceof Warrior){
+        if(p instanceof Warrior){ //Warrior 타입을 갖을 수 있니?
             damage = 10; job = "전사";
         } else if(p instanceof Mage){
             damage = 20; job = "마법사";
@@ -46,9 +46,20 @@ public class Warrior extends Player {
 
 
 
+    @Override//alt insert //charcter info void
+     void characterInfo(){ //Player의 함수 ***캐릭터 정보***
+        super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출
+        System.out.println("# 분노:" + rage); //warrior 固有特徴 출력!
+    }
+}
 
 
-        //내가 작성
+
+
+
+
+
+//내가 작성
     /*
         public void rush(Player t){
             if(t instanceof Warrior){
@@ -62,16 +73,3 @@ public class Warrior extends Player {
             }
     }
      */
-
-
-
-
-
-
-
-    @Override//alt insert //charcter info void
-     void characterInfo(){ //Player의 함수 ***캐릭터 정보***
-        super.characterInfo();//부모요소 장착 //alt insert로 호출가능 : 상위 메서드 호출
-        System.out.println("# 분노:" + rage); //warrior 固有特徴 출력!
-    }
-}

@@ -25,7 +25,7 @@ public class Score {
     private int total;
     private double average;
 
-    public Score(){}
+    public Score(){} // @@@?
 
     public Score(String name, int kor, int eng, int math) {
         this.name = name;
@@ -96,17 +96,17 @@ public class Score {
         this.average = this.total / 3.0;
     }
 
-    public void scoreInfo(){
-        System.out.printf("이름: %s 국어 %d 영어 %d 수학 %d\n 총점 %d 평균%.2f\n"
-        ,name ,kor, eng, math, total, average);
+    public void scoreInfo() {
+        System.out.printf("이름: %s  국어: %d점  영어: %d점  수학: %d점\n총점: %d점  평균: %.2f점\n"
+                , name, kor, eng, math, total, average);
     }
 
     //점수 유효성 검증
     //static 추가 : 공용이기 때문에
-    public static boolean isValidateScore(int score){//보통 boolean type 사용시 is+ : 관례 true or false
+    public static boolean isValidateScore(int score) {//보통 boolean type 사용시 is+ : 관례 true or false
         //(int score)매개변수 있어야 함
-        if(score > 100 || score < 0){
-            System.out.println("유효하지 않은 점수입니다. (0~100)");
+        if(score > 100 || score < 0) {
+            System.out.println("유효하지 않은 점수입니다. (0 ~ 100)");
             return false;
         }
         return true;

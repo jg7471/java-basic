@@ -13,18 +13,18 @@ public class MainClass {
          - 다형성을 적용시켰을 경우에도 안전하게 사용이 가능합니다.
          */
 
-        //추상클래스는 스스로의 객채 생성 불가
+        //추상클래스는 스스로의 객체 생성 불가
         //하지만 추상클래스는 객체가 아예 생성이 안되는 것이 아니라
         //자식 객체를 통해 실체화가 가능(super()) -> 부모에선 대충선언 ->자식에게 짬시킴
 
         //Pet p = new Pet("애완견","몰라",3); //추상클래스 스스로 객체 생성 불가
         //추상클래스는 미완성 : 스스로 불가 :자식에 의해서 생성되야함
 
-       Pet dog = new Dog("뽀삐","푸들",3); //생성자 1개 뿐
+       Pet dog = new Dog("뽀삐","푸들",3); //객체 생성 : 생성자 각 1개뿐
        Cat cat = new Cat("꾸끼","코숏",2);
        GoldFish fish = new GoldFish("잉어킹","잉어",1);
 
-       Pet[] pets = {
+       Pet[] pets = { //추상클래스 Pet 다형성
                dog, cat, fish
        };
 
@@ -32,7 +32,6 @@ public class MainClass {
            pet.takeNap();
            pet.eat();
            pet.walk();
-           pet.sayHello();
            System.out.println(pet.sayHello());
        }
 

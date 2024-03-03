@@ -22,12 +22,25 @@ public class MainClass {
           출력해 주세요.
          */
     public static void main(String[] args) {
+        //객체 생성
         Warrior w1 = new Warrior("전사1");
         Warrior w2 = new Warrior("전사2");
         Mage m1 = new Mage("마법사1");
         Mage m2 = new Mage("마법사2");
         Hunter h1 = new Hunter("사냥꾼1");
         Hunter h2 = new Hunter("사냥꾼2");
+
+
+        Player[] targets = {w1, w2, m1, m2, h1, h2};//Player 부모
+        m1.blizzard(targets);
+
+        System.out.println("===================================================");
+
+        w1.rush(m1);
+        w1.rush(w2);
+        w1.rush(h1);
+
+
 
         /* 내가작성
         void blizzard (String mage)
@@ -40,10 +53,6 @@ public class MainClass {
 
         System.out.printf("%s가 눈보라 스킬을 사용합니다", m1);
         */
-
-
-        Player[] targets = {w1, w2, m1, m2, h1, h2};
-        m1.blizzard(targets);
 
 
         //내가 작성

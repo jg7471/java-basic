@@ -47,15 +47,18 @@ public class MainClass {
          - 이를 해결하기 위해 강제 타입 변환을 사용합니다.
          */
 
-
+        //Parent p2 = new Child();
         Child c2 = (Child)p2;//객체 생성 아님(주소값 같다 : 부모타입을 이용해서 접근 한 것뿐)
         //부모 타입을 자식 타입으로 강제 변환(DownCasting) // 그대로 Child로 내림
         //p2주소 c2로 옮기라 : 상위p2부모 -> 하위c2자식
-        c2.n2 = 2;
+        c2.n2 = 10;// Child n2값 변경됨
+        int b = c2.n2+1;//10+1
+        System.out.println("bbb"+b);//11
+
         c2.method3();
         //객체가 2개 생성된 것이 아니라, 하나의 객체의 접근 방식을 두가지로 늘린 것
-        System.out.println("p2 = " + p2);
-        System.out.println("c2 = " + c2);
+        System.out.println("p2 = " + p2);//주소값 같다 c2=p2
+        System.out.println("c2 = " + c2);//주소값 같다 c2=p2
 
         //object 타입의 변수는 어떠한 객체든 담을 수 있지만, 객체 고유의 기능을 사용하기 위해서는
         //형 변환이 거의 항상 필요함 -> Object가 물려주는 메서드 자체가 별로 없음(상징적 클래스)
@@ -64,8 +67,8 @@ public class MainClass {
         System.out.println("문자열의 길이 " + str.length()); // indexOf subString charAt : object는 자식이 얼마나 같고 있는지 모름
 
         //다형성이 한 번도 발생하지 않은 경우에는 강제 형 변환을 사용할 수 없음
-        Parent ppp = new Parent(); //부모객체 ppp -> 형변환ppp-> 자식ccc XXX
-        //Child ccc = (Child)ppp; //에러
+        Parent ppp = new Parent(); //실제
+        //Child ccc = (Child)ppp; //x 부모객체 ppp -> (Child)형변환ppp-> 자식ccc XXX
 
     }
 }

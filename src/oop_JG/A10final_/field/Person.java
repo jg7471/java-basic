@@ -14,5 +14,5 @@ public class Person {
 
     public Person(String name) { //무조건 요렇게 alt+insert
         this.name = name;
-    }
+    }//생성자 매개변수 추가 : 객체가 생성될 때 이름을 생성하시오 :name을 초기화하겠다
 }

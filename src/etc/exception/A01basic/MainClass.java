@@ -1,7 +1,5 @@
-package etc_JG.exception.A01basic;
+package etc.exception.A01basic;
 
-import java.sql.SQLOutput;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainClass {

@@ -32,7 +32,7 @@ public class MainClass {
 
         //방법 3 : 다형성을 적용해서 서로 다른 type들을 모아놓을 수 있다
         Car[] cars = {s1,s2,s3,p1,p2,p3,t1,t2,t3,t4}; //부모 Car의 배열에 다 집어 넣음 : 다형성
-        for (Car c : cars) {
+        for (Car c : cars) { //@@@ Car c 여기서 선언된거? 같은 패키지내 전부 다 사용 가능?
             c.run();
         }
 

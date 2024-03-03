@@ -1,4 +1,4 @@
-package etc_JG.exception.A04Custom;
+package etc.exception.A04Custom;
 
 public class LoginValidateException extends Exception {//예외타입 끝 Exception 관례
 

@@ -2,7 +2,7 @@ package basic_JG.A12method;
 
 public class A3MethodExample3 {
 
-    static int add(int n1, int n2) {
+    int add(int n1, int n2) {
         return n1 + n2;
         //System.out.println("야~~~~~"); //return 밑에 추가X
     }
@@ -30,13 +30,14 @@ public class A3MethodExample3 {
 
 
     public static void main(String[] args) { //void : return X 선언
-        int r1 = add(3, 8); //int r1 = 11
+        A3MethodExample3 m3 = new A3MethodExample3();//원래는 이렇게 호출이 맞음!!(같은 클래스에서는 생략가능)
+        int r1 = m3.add(3, 8); //int r1 = 11
         //int r1 = A3MethodExample3.add(3, 8); //int r1 = 11 원랜 이렇게 부르는게 정석 Static 있으면 생략가능
 
-        int r2 = add(10, 15); //int r2 = 25
-        int r3 = add(add(4, 6), add(7, 8));
+        int r2 = m3.add(10, 15); //int r2 = 25
+        int r3 = m3.add(m3.add(4, 6), m3.add(7, 8));
 
-        int[] totalResult = operateTotal(30, 6);
+        int[] totalResult = operateTotal(30, 6);//method에 static 붙어서 객체 생성없이 바로 호출한 것)
         System.out.println("30+6=" + totalResult[0]);
         System.out.println("30-6=" + totalResult[1]);
         System.out.println("30*6=" + totalResult[2]);
@@ -53,7 +54,7 @@ public class A3MethodExample3 {
         //int r4 = multi(10,7); //xxx VOID함수
         //System.out.println(multi(4,4)); //XXX
         multi(10,7);
-        multi(add(3,4),add(4,7));
+        multi(m3.add(3,4),m3.add(4,7));
         //add(multi(4,4), multi(5,6)); //xxx
 
         divide(20,2);

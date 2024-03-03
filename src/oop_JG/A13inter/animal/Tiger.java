@@ -1,6 +1,7 @@
 package oop_JG.A13inter.animal;
 
 public class Tiger extends Livings implements Huntable, Violent{
+
     @Override
     public void feed(String foodName) {
 

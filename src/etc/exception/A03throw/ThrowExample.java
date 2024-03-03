@@ -1,4 +1,4 @@
-package etc_JG.exception.A03throw;
+package etc.exception.A03throw;
 
 public class ThrowExample {
 

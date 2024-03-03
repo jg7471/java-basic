@@ -1,4 +1,4 @@
-package etc_JG.exception.A05api.lang.math;
+package etc.A05api.lang.math;
 
 import javax.lang.model.SourceVersion;
 

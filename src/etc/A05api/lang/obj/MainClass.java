@@ -1,6 +1,5 @@
-package etc_JG.exception.A05api.lang.obj;
+package etc.A05api.lang.obj;
 
-import java.util.HashSet;
 //toSting 많이 씀 equal+hash 가끔 clone 가끔
 
 public class MainClass {
