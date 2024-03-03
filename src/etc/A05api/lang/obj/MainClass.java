@@ -30,7 +30,7 @@ public class MainClass {
             System.out.println("이름 or 나이 or  둘 다 다를 수도");
         }
         //object 최상위 부모 메서드 준비함 : 자식들이 오버라이딩해서 커스텀해서 사용하라
-        //kim.equals(hong); //kim == hong 의미
+        //kim.equals(hong); //kim == hong 의미 11
 
         /*
         System.out.println(kim.hashCode()); //자바에서는 기본적으로 객체와 객체는 동등하다 : 객체는 다른데 주소는 동일
