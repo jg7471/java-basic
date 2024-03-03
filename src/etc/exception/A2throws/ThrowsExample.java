@@ -5,7 +5,7 @@ public class ThrowsExample {
     // 객체 생성하기 귀찮으니 static
     static String[] greetings = {"Hello", "哈喽", "ハロー"};
 
-    //throws 던지다 //throw 발생시키다
+    //예외 떠넘기기 (throws) // 예외를 강제로 발생시키는 throw (raise - 발생시키다)
 
      /*
      # throws
@@ -19,14 +19,14 @@ public class ThrowsExample {
      - 또한, 원하는 영역으로 예외를 모아서 한번에 처리하는 것도 가능합니다.
      */
 
-    static void greet(int idx) throws Exception{//1)예외처리 전가 : 호출부(main)에서 오류를 처리하여라
+    static void greet(int idx) throws Exception{ //선언부 //throws + 예외타입 //1)예외처리 전가 : 호출부(main)에서 오류를 처리하여라
         System.out.println(greetings[idx]); // 3 여기서 오류 발생 //오류 발생 : 객체 생성됨??@@@ 240229 1144 3교시
         // 배열의 길이 0123
     }
 
     public static void main(String[] args) { //main에 throws 붙이면 -> 자바가상머신 처리 : 처리 안하겠다는 의미 : 선언 XX
         try {
-            greet(3); //3 //2)throws Exception 전달 받고
+            greet(3); //3 //2)throws Exception 전달 받고 //호출부
         } catch (Exception e) {
             System.out.println("인덱스 범위를 벗어남"); //3)throws Exception 전달함 -> 오류
             e.printStackTrace(); //실무에서 사용多 : 메서드 예외 발생 원인을 逆추적

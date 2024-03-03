@@ -17,4 +17,5 @@ public class Pen {
         System.out.println(color + "섹 펜의 가격은" + price + "원 입니다");
     }
 
+
 }

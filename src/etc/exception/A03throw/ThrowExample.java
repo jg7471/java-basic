@@ -2,7 +2,7 @@ package etc.exception.A03throw;
 
 public class ThrowExample {
 
-    static int calcTotal(int num) throws Exception{//던짐 main으로
+    static int calcTotal(int num) throws Exception{//던짐 main으로 //2번
 
         /*
          # 예외를 강제로 발생시키는 키워드 throw
@@ -21,10 +21,11 @@ public class ThrowExample {
 
 
         if(num <= 0){
-            throw new Exception();//예외 강제로 생성하는 기능 throw, 에러타입 Exception()
+            throw new Exception();//1번 //예외 강제로 생성하는 기능 throw, 에러타입 Exception()
+            //return 0; method 강제종료 //매개변수가 int 라 뭐라도 값을 줘야기에 0 줌
+            //void return X
+            //return //메서드 강제종료 break : method 内 사용 불가
 
-            //return 0;// 메서드 강제종료 break : method 内 사용 불가
-            // 반복문 종료 only return? void만 가능 : return 값 뭐라도 줘야 하기에 0줌 @@@
         }
 
         int total = 0;
@@ -38,7 +39,7 @@ public class ThrowExample {
         try {
             System.out.println(calcTotal(100));
             System.out.println(calcTotal(-120));
-        } catch (Exception e) {
+        } catch (Exception e) {//3번
             System.out.println("매가값을 0보다 크게 주세여");
         }
 

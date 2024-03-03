@@ -15,20 +15,28 @@ private int age;
 
 
 
-    //인강 @@@
+    //toString() 기존에는 주소값 뜨는데-> 오버라이딩을 통해 내 입맛으로 바꿈
+    //->sout 해서 출력값 설정(personInfo) 할 필요 없음 //이름 : name , 나이 age 세 <-이런거
     //toString() : 객체의 정보(필드)를 문자열 형태로 리턴.
-    @Override //부모가 물려준 메서드 내부만 변경 가능 //toString 커스텀
-    public String toString() {
+    //toString() 오버라이딩 내 입맞에 맞게 재정의
+    @Override //ctrl O //부모가 물려준 메서드 내부만 변경 가능 //toString 커스텀
+    public String toString() {//겉에 틀 못바꿈 : 오버라이딩 규칙 : 1리턴타입 동일 2메서드 이름 동일 3메서드 매개변수 동일
         return "Person [이름: " +name+ ", 나이" +age+ "]";
     }
 
-    @Override //o를 드래그하고 shift f6 일괄 이름변경 가능
-    public boolean equals(Object obj) { //equals 마법사로 만듦 //오버라이딩 return, equals(Object ) 변경 불가 : 변수명은(o) 변경가능 // type, 매개변수 개수 증가 XXX
+    //@@@ equals 클릭시 api 조회 안됨
+    //equals 입력후 마법사로 생성-기본 equals 입맛에 맞게 수정
+    @Override // 기존o를 드래그하고 shift f6 : 일괄 이름변경 가능
+    public boolean equals(Object obj) { //equals 마법사로 만듦 //오버라이딩 return, equals//Object :타입은 변경 불가 : 변수명은 기존 o : 변경가능 obj로 변경 // type, 매개변수 개수 증가 XXX
         if (this == obj) return true; //주소값이 같다면 같은 객체야
-        if (obj instanceof Person) { //obj가 Person type을 갖을 수 있어?
-            Person p = (Person) obj; //obj(부모)person 타입 확인 불가 : person타입 필요 -> instanceof로 걸러준다
+        if (obj instanceof Person) { //obj가 Person type을 갖을 수 있어? 좌항 객체 우항 타입
+            Person p = (Person) obj; //obj(부모) Person p 타입 확인 불가 -> (Object)->(Person)obj 형 변환-> name과 age를 확인하기 위해서
+            // person타입 필요 -> instanceof로 걸러준다
             //object 타입을 person 타입으로 형변환 ->name과 age를 확인하기 위해
+
             if(this.name.equals(p.name) && this.age == p.age){ //이름/나이 같은지
+            //Person 타입만 갖을 수 있는 타입객체만 내림 : 그 객체의 this.name과 전달된 p.name이 같다면
+                // equals를 부른 this.age의 age와 p.age와 같니 (p.age = obj로 거름)
                 return true;
             }
         }
@@ -67,6 +75,11 @@ private int age;
         this.name = name;
     }
 
+    //이거 위에도 적음
+    //toString() 기존에는 주소값 뜨는데-> 오버라이딩을 통해 내 입맛으로 바꿈
+    //->sout 해서 출력값 설정(personInfo) 할 필요 없음 //이름 : name , 나이 age 세 <-이런거
+    //toString() : 객체의 정보(필드)를 문자열 형태로 리턴.
+    //toString() 오버라이딩 내 입맞에 맞게 재정의
     public void personInfo(){
         System.out.println("이름"+name);
         System.out.println("나이"+age+"세");

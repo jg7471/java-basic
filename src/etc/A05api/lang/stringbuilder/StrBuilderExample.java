@@ -2,7 +2,7 @@ package etc.A05api.lang.stringbuilder;
 
 public class StrBuilderExample {
     //String 값을 버리는게 아니라 계속 객체를 새롭게 생성 : 메모리 낭비, 속도 저하
-    //StringBuffer 멀티쓰레드 StirngBuilder 싱글쓰레드 : 클래스는 다르나 메서드 내용은 같음 : 1+1
+    //StringBuffer 멀티쓰레드 StringBuilder 싱글쓰레드 : 클래스는 다르나 메서드 내용은 같음 : 1+1
     public static void main(String[] args) {
 
         String str = "hello";

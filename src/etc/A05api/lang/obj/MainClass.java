@@ -12,9 +12,13 @@ public class MainClass {
         //String name = "박영희";
         String name1 = new String("박영희");
 
+        //System.out.println("redPen = " + redPen); // 주소값 나옴(hash 없을때 인듯)
+        System.out.println("kim 주소값"+kim.toString()); //주소값 나옴 (hash 없을 때인듯) //원래는 .toString()생략-object라
+        System.out.println("name1 Test"+name1);// 문자값 나옴
+
 
         //객체 타입의 변수를 출력하거나 값을 얻을 때는
-        //뒤에 자동으로 .toString()이 붙어서 진행됨.(Object가 물려주는 메서드)
+        //뒤에 자동으로 .toString()이 붙어서 진행됨.(Object 가 물려주는 메서드) : 그래서 생략해도 괜찮
         //System.out.println(kim.toString()); //주소 출력 //object
         System.out.println(kim);
         System.out.println(hong);
