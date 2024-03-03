@@ -28,7 +28,7 @@ private int age;
     //equals 입력후 마법사로 생성-기본 equals 입맛에 맞게 수정
     @Override // 기존o를 드래그하고 shift f6 : 일괄 이름변경 가능
     public boolean equals(Object obj) { //equals 마법사로 만듦 //오버라이딩 return, equals//Object :타입은 변경 불가 : 변수명은 기존 o : 변경가능 obj로 변경 // type, 매개변수 개수 증가 XXX
-        if (this == obj) return true; //주소값이 같다면 같은 객체야
+        if (this == obj) return true; //주소값이 같다면 같은 객체야 //여기 왜 주소값? @@@
         if (obj instanceof Person) { //obj가 Person type을 갖을 수 있어? 좌항 객체 우항 타입
             Person p = (Person) obj; //obj(부모) Person p 타입 확인 불가 -> (Object)->(Person)obj 형 변환-> name과 age를 확인하기 위해서
             // person타입 필요 -> instanceof로 걸러준다
@@ -51,6 +51,7 @@ private int age;
     //equal + hashCode 同时 오버라이딩 必!!! //hash : 같은 중복 피하겠다 : hash 코드 건들지 마셈, equals만 입맞에 맞게 편집
     public int hashCode() { //1) 주소값 출력 메소드 //요 메소드 유무에 따라 값 달라짐
         return Objects.hash(name, age); //name, age 맞춰준다 //만약 name만 같아도 된다하면 age 지워도 됨 //hash에 대해 자세히 알지 않아도 됨
+        //return Objects.hash(name); //이름만 같길 원하는 경우
     }
 
 //    public Person() { //생성자
@@ -73,7 +74,7 @@ private int age;
 
     public void setName(String name) { //name만 변경
         this.name = name;
-    }
+    } //setn입력하면 setName 가능
 
     //이거 위에도 적음
     //toString() 기존에는 주소값 뜨는데-> 오버라이딩을 통해 내 입맛으로 바꿈
