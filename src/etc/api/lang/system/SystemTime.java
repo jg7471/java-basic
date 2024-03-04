@@ -26,5 +26,6 @@ public class SystemTime {
         System.out.println(System.getenv()); //환경정보
 
 
+
     }
 }

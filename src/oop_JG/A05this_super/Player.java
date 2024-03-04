@@ -34,12 +34,12 @@ public class Player {
 
 
     Player(String name, int hp){//3번째 생성자
-        this(name);//@@@@ 재정의 한 것을 물려받겠다
+        this(name);//@@ 재정의 한 것을 물려받겠다
         //기본생성자 값 호출 //다른 생성자의 호출은 생성자 내에서 항상 최상단에 위치해야함
         //@@ ->Player(String name) 요거 참고하겠다 : 갯수 같음 -> 근데 왜 사용?
         System.out.println("2번)GO GO GO!!!");
         //this.name = name; this에 집어 넣음
-        this.hp = hp;//3번째 생성자에서 재정의 @@@@
+        this.hp = hp;//3번째 생성자에서 재정의 @@
     }
 
     Player(String name, int level, int hp, int atk) {//4번째 생성자

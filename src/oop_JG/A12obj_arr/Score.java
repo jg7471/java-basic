@@ -25,7 +25,7 @@ public class Score {
     private int total;
     private double average;
 
-    public Score(){} // @@@?
+    public Score(){} // @@? 지워도 됨 ? ㅇㅇ
 
     public Score(String name, int kor, int eng, int math) {
         this.name = name;

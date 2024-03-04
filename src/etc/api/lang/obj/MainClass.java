@@ -24,6 +24,8 @@ public class MainClass {
         System.out.println(hong);
         System.out.println(name1);
 
+        //kim.equals(kim); //자신 호출 필요X
+
         if(kim.equals(hong)){ //ctrl alt t : if문 감싸기 //equals 사용 @@@
             System.out.println("이름과 나이가 같네요");
         }else{

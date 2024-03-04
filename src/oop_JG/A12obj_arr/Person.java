@@ -8,7 +8,7 @@ public class Person {
     private String gender;
 
     //생성자 생성 alt insert
-    public Person() {} // @@@ 없어도?
+    public Person() {} // @@ 없어도? 없어도됨
 
     public Person(String name, int age, String gender) {
         this.name = name;

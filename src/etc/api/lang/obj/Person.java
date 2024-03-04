@@ -28,7 +28,7 @@ private int age;
     //equals 입력후 마법사로 생성-기본 equals 입맛에 맞게 수정
     @Override // 기존o를 드래그하고 shift f6 : 일괄 이름변경 가능
     public boolean equals(Object obj) { //equals 마법사로 만듦 //오버라이딩 return, equals//Object :타입은 변경 불가 : 변수명은 기존 o : 변경가능 obj로 변경 // type, 매개변수 개수 증가 XXX
-        if (this == obj) return true; //주소값이 같다면 같은 객체야 //여기 왜 주소값? @@@
+        if (this == obj) return true; //주소값이 같다면 같은 객체야 //여기 왜 주소값? @@ euals = this
         if (obj instanceof Person) { //obj가 Person type을 갖을 수 있어? 좌항 객체 우항 타입
             Person p = (Person) obj; //obj(부모) Person p 타입 확인 불가 -> (Object)->(Person)obj 형 변환-> name과 age를 확인하기 위해서
             // person타입 필요 -> instanceof로 걸러준다
@@ -62,7 +62,7 @@ private int age;
     //생성된 객체가 사라지는 시점에서 자동으로 호출(Garbage Collector 가 실행될 때 자동실행됨)
     protected void finalize() throws Throwable {
         System.out.println(this.name + "이가 죽었습니다");
-        super.finalize();
+        super.finalize();//9버전 이후 사용X
     }
 
     //객체 복사 메서드

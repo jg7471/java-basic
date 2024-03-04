@@ -1,9 +1,12 @@
 package etc.api.collection.list;
 
 import oop_JG.A06modi.member.pac1.A;
+import oop_JG.A13inter.Inter;
 import util.Utility;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static util.Utility.*;
@@ -35,6 +38,7 @@ public class ArrayListExample {
     nick.add(str);
     nick.add("멍멍이");
     nick.add(new String("개구리"));
+    nick.add("짹짹이");
     nick.add("야옹이");// 그냥 추가(중복 허용 중복되더라도 인덱스로 구분)
     System.out.println(nick); //바로 확인 가능
 
@@ -69,7 +73,6 @@ public class ArrayListExample {
         //리스트의 반복문 처리
         for(int i = 0; i < nick.size(); i++){
             System.out.println(nick.get(i));
-
         }
 
         makeLine();
@@ -78,6 +81,71 @@ public class ArrayListExample {
         for (String s : nick) {
             System.out.println(s);
         }
+
+        //contains(객체) : 리스트 내의 객체의 존재 유무를 파악하는 메서드
+        System.out.println(nick.contains("메뚜기"));
+
+        //indexOf(객체): 특정 객체의 인덱스 탐색 //없는 객체라면 -1 리턴
+        int idx = nick.indexOf("어흥이");
+        System.out.println("어흥이의 인덱스 " + idx);
+
+        //clear() : 리스트 내부 요소 전체 삭제
+        nick.clear();
+        System.out.println(nick);
+
+        //isEmpty(): 리스트가 비어있는지의 여부 확인
+        System.out.println(nick.isEmpty());
+
+        makeLine();
+
+
+
+        /*
+        #컬렉션 객체들은 Colletions 의 기능을 사용할 수 있습니다.
+        Collections 는 컬렉션 객체들의 부가 기능들을 지원
+        */
+        //List<int> score = new ArrayList<>(); //<>타입 비워도 OK
+        //int 객체 타입 X -> Integer로 선언해야 함
+        List<Integer> score = new ArrayList<>();
+        score.add(65); //고대로 사용하면 됨
+        //Integer v1 = new Integer(65); //객체 선언 X, 자동 박싱
+
+        //리스트 생성과 동시에 객체 초기화하기
+        List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        System.out.println(nums);
+
+        //한번에 객체 많이 추가하기 //이미 리스트 만들어져 있을 때
+        Collections.addAll(score, 80,70,45,12,15,100,30,100,90);
+        System.out.println(score);
+
+        //컬렉션에서 등장 횟수 구하기
+        System.out.println("100점 학생 수 : " + Collections.frequency(score,100));
+
+        //최대값, 최소값 구하기
+        System.out.println("최대값 : " + Collections.max(score));
+        System.out.println("최소값 : " + Collections.min(score));
+
+        //오름차 정렬(작은값부터 순서대로 커지는 정렬)
+//        Collections.sort(score);
+//        System.out.println(score);
+
+        //내림차 정렬(큰 값부터 순서로 작아지는 정렬)
+//        Collections.reverse(score); //(sort)역순 배치
+        Collections.sort(score, Collections.reverseOrder()); //(sort 영향 없이)바로 내림차 정렬
+        System.out.println(score);
+
+        //두 요소의 위치를 교체 : swap(리스트, i, j)
+        Collections.swap(score, 3,7);
+        System.out.println(score);
+
+        //리스트 내의 요소를 무작위로 섞기
+        Collections.shuffle((score));
+        System.out.println(score);
+
+        //원하는 값으로 컬렉션 초기화
+        Collections.fill(score,100); //fill 채우다
+        System.out.println(score);
+
 
     }
 }

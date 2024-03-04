@@ -14,7 +14,7 @@ public class DBManager {
         upw = "aaa1111!";
     }
 
-    public DBManager() {//객체 //여기선 지워도 되죠? @@@
+    public DBManager() {//객체 //여기선 지워도 되죠? @@ //지워도됨
         System.out.println("생성자가 호출됨!");
         addr = "192.168.0.2:8181/XEPDB1";
         uid = "abc1234";

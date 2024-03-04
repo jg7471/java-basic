@@ -2,6 +2,7 @@ package oop_JG.A11poly.car;
 
 public class MainClass {
 
+
     public static void main(String[] args) {
 
         //클래스는 동일하지만 객체는 다름
@@ -56,12 +57,14 @@ public class MainClass {
         //부모타입 필요할 때
 
         System.out.println("------------------------------");
-        //방법2
+        //방법2// return new Tesla(); = Driver  Car 속성 같게 됨
         Tesla myTesla = (Tesla) kim.buyCar("테슬라");// @@@ 다형성 적용 //Car(부모)->(Tesla)(자식) 형변환
         //부모는 자식에게 모든걸 주지만, 자식은 아무 것도 줄 수 없음(부모는 자식이 변화 알 수 없음)
         myTesla.run();
         myTesla.activeAutopilot();
         System.out.println("------------------------------");
+
+
 
 
         CarShop shop = new CarShop();
