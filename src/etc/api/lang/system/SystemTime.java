@@ -1,4 +1,4 @@
-package etc.A05api.lang.system;
+package etc.api.lang.system;
 
 public class SystemTime {
     public static void main(String[] args) {

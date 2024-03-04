@@ -1,4 +1,4 @@
-package etc.A05api.lang.obj;
+package etc.api.lang.obj;
 
 //toSting 많이 씀 equal+hash 가끔 clone 가끔
 

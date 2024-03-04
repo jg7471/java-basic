@@ -1,4 +1,4 @@
-package etc.A05api.lang.math;
+package etc.api.lang.math;
 
 public class MathQuiz {
 

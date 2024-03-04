@@ -1,4 +1,4 @@
-package etc.A05api.lang.stringbuilder;
+package etc.api.lang.stringbuilder;
 
 public class strTest {
 

@@ -1,9 +1,9 @@
-package etc.A05api.lang.math;
+package etc.api.lang.math;
 
 import javax.lang.model.SourceVersion;
 
 public class MathExample {
-
+//Math 객체 생성 x
     public static void main(String[] args) {
         //올림
         int ceil = (int)Math.ceil(1.1); //소숫점값 형변환

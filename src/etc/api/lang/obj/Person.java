@@ -1,4 +1,4 @@
-package etc.A05api.lang.obj;
+package etc.api.lang.obj;
 
 import java.util.Objects;
 

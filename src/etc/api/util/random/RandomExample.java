@@ -1,0 +1,31 @@
+package etc.api.util.random;
+
+import java.util.Random;
+
+public class RandomExample {
+
+    public static void main(String[] args) {
+
+        Random r = new Random(); //Random  import 필요(입력 후 enter)
+
+        //실수 난수 : 0.0 <= ~ < 1.0
+        double d = r.nextDouble();
+        System.out.println("d = " + d);
+
+        //정수 난수: nextInt();
+        int i = r.nextInt(); //기본범위 : int의 전범위(약 -21억 ~ 약 21억)
+        System.out.println("i = " + i);//보통 범위를 지정해서 사용함
+
+        //0~5까지의 정수 난수 생성(끝값이 미만으로 인식됨)
+        int j = r.nextInt(6); //6미만
+        System.out.println("j = " + j);
+
+        //10~100까지 정수 난수 생성
+        int k = r.nextInt(91) + 10; //nextDoblue 등등 //math static//random 객체 생성 필요
+        System.out.println("k = " + k);
+
+        boolean b = r.nextBoolean();
+        System.out.println("b = " + b);
+
+    }
+}
