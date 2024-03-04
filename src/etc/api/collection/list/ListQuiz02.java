@@ -27,7 +27,7 @@ public class ListQuiz02 {
 
 
         //List<User> UserList = new ArrayList<>();
-        List<User> userList = new ArrayList<>();
+        List<User> userList = new ArrayList<>(); //type User class
 
 
         /*大방법1
@@ -65,8 +65,8 @@ public class ListQuiz02 {
 
         /*
         for(User user: userList){
-            if(user.getName().equals("홍길동")){
-                UserList.remove(user);
+            if(user.getName().equals("홍길동")){ //user의 getName()이 홍길동이라면
+                UserList.remove(user); // UserList에서 지우겠다
                 break;//향상 for 문에서 list 크기 변화하면 안됨 or 찾을시 바로 break;
                 //or 크기가 바뀌는 순간, 향상 for 문 고장남(자바, 자바스크립트 동일)
             }
@@ -75,8 +75,8 @@ public class ListQuiz02 {
 
         for( int i = 0; i < userList.size(); i++){
             /* 방법1
-            User user = userList.get(i);
-            String name = user.getName();
+            User user = userList.get(i); //userList의 i번째 꺼냄 : user라고 지역변수 지정
+            String name = user.getName(); //user객체에서 이름 호출 : name라고 지역변수 지정
             if(name.equals("홍길동")){
                 UserList.remove(i);
                 //List크기 달라져도 영향 X

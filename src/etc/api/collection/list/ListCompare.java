@@ -14,7 +14,8 @@ public class ListCompare {
          */
 
         List<Integer> array = new ArrayList<>();
-        List<Integer> linked = new ArrayList<>();
+        List<Integer> linked = new LinkedList<>();
+
 
         for(int i = 0; i < 100000; i++){
             array.add(i);

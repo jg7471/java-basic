@@ -40,7 +40,7 @@ public class ScoreMain {
         int idx = 0;
 
         //종료조건 1. 그만 2. 더 이상 객체 넣을게 없다
-        while(idx != scoreList.length){ //방법3 : 같아졌다면 종료
+        while(idx != scoreList.length){ //방법3 : 같지 않다 : 같아졌다면 종료
         //while(scoreList[scoreList.length-1] == null){//인덱스는 항상 배열의 길이보다 -1 //방법2
 
             //while(true){ 방법2 : 무한루프
