@@ -20,7 +20,7 @@ public class ThrowsExample {
      */
 
     static void greet(int idx) throws Exception{ //선언부 //throws + 예외타입 //1)예외처리 전가 : 호출부(main)에서 오류를 처리하여라
-        System.out.println(greetings[idx]); // 3 여기서 오류 발생 //오류 발생 : 객체 생성됨??@@@ 240229 1144 3교시
+        System.out.println(greetings[idx]); // 3 여기서 오류 발생 //오류 발생 : 객체 생성됨??@@ 240229 1144 3교시
         // 배열의 길이 0123
     }
 

@@ -2,7 +2,7 @@ package etc.exception.A04Custom;
 
 import java.util.Scanner;
 
-//240229 1220~ 인강 @@@
+//240229 1220~ 인강 @@
 public class MainClass {
     public static void main(String[] args) {
 

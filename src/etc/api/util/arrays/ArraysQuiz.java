@@ -21,8 +21,8 @@ public class ArraysQuiz {
         Arrays.sort(participant);
         Arrays.sort(completion);
 
-        for(int i = 0; i < completion.length; i++){
-            if(!participant[i].equals(completion[i])){ //@@@
+        for(int i = 0; i < completion.length; i++){ //짧은거 기준
+            if(!participant[i].equals(completion[i])){ //@@
                 return participant[i];
             }
         }

@@ -17,7 +17,7 @@ public class StrBuilderExample {
         System.out.println("========================================");
 
         StringBuilder sb = new StringBuilder("hello");
-        System.out.println(sb.toString()); //@@@ default?
+        System.out.println(sb.toString()); // toString default
         System.out.println(sb); //위와 같음
         System.out.println("sb 주소값 "+sb.hashCode());
 

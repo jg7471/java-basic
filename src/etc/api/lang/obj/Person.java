@@ -24,7 +24,7 @@ private int age;
         return "Person [이름: " +name+ ", 나이" +age+ "]";
     }
 
-    //@@@ equals 클릭시 api 조회 안됨
+    //@@ equals 클릭시 api 조회 안됨
     //equals 입력후 마법사로 생성-기본 equals 입맛에 맞게 수정
     @Override // 기존o를 드래그하고 shift f6 : 일괄 이름변경 가능
     public boolean equals(Object obj) { //equals 마법사로 만듦 //오버라이딩 return, equals//Object :타입은 변경 불가 : 변수명은 기존 o : 변경가능 obj로 변경 // type, 매개변수 개수 증가 XXX

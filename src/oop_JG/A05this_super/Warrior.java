@@ -12,7 +12,7 @@ public class Warrior extends Player {
 
     int rage;
 
-    public Warrior(String name) { //@@@
+    public Warrior(String name) { //@@
         //alt insert 자동 생성자
         //모든 생성자에는 super()가 내장되어 있음
         //자식 객체가 생성될 때는 부모의 객체도 생성이 되어야

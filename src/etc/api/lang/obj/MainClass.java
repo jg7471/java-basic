@@ -4,9 +4,9 @@ package etc.api.lang.obj;
 
 public class MainClass {
 
-    public static void main(String[] args) { //메인 메서드란??@@@
+    public static void main(String[] args) { //메인 메서드란??@@
 
-        Person kim = new Person("홍길동",25); //@@@언급한거 인강
+        Person kim = new Person("홍길동",25); //@@언급한거 인강
         Person hong = new Person("홍길당",25); //hash는 이름 같아야 함
 
         //String name = "박영희";
@@ -26,7 +26,7 @@ public class MainClass {
 
         //kim.equals(kim); //자신 호출 필요X
 
-        if(kim.equals(hong)){ //ctrl alt t : if문 감싸기 //equals 사용 @@@
+        if(kim.equals(hong)){ //ctrl alt t : if문 감싸기 //equals 사용 @@
             System.out.println("이름과 나이가 같네요");
         }else{
             System.out.println("이름 or 나이 or  둘 다 다를 수도");

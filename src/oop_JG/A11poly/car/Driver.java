@@ -5,7 +5,7 @@ package oop_JG.A11poly.car;
 public class Driver {
 
 
-        public void drive (Car c){ // 매개변수 부모타입으로 작성 : 매개변수의 다형성 : 부모 사용 //@@@ extends 없는데 가능? Car 같은 패키지 내에서 가능
+        public void drive (Car c){ // 매개변수 부모타입으로 작성 : 매개변수의 다형성 : 부모 사용 //@@ extends 없는데 가능? Car 같은 패키지 내에서 가능
             System.out.println("운전을 시작합니다");
             c.run();
         }
