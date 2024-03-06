@@ -10,7 +10,7 @@ public class LottoSimulator {
     //main에서 초기화 안됨 : 프로그램 전체에서 공통된 상태나 정보 유지 가능
     //클래스 레벨에서 선언된 정적(static) 변수는 해당 클래스의 모든 인스턴스가 공유하는 변수
 
-    public static Random r = new Random(); //랜덤 객체 생성
+    public static Random r = new Random(); //랜덤 객체 생성 //public 없어도 됨
 
     public static int prize1 = 0; // 1등 당첨 횟수를 기억할 변수.
     public static int prize2 = 0; // 2등 당첨 횟수를 기억할 변수.
@@ -27,8 +27,10 @@ public class LottoSimulator {
               무엇을 쓰든 상관하지 않겠습니다.
               중복이 발생하면 안됩니다.
          */
+        System.out.println();
+
         Set<Integer> lotto = new HashSet<>();
-        while(lotto.size() < 6) {
+        while(lotto.size() < 6) { //set의 크기 확인 : size()
             int num = r.nextInt(45) + 1;
             lotto.add(num);
         }
@@ -39,7 +41,7 @@ public class LottoSimulator {
     public static int createBonusNum(Set<Integer> win) {
         while(true) {
             int bonus = r.nextInt(45) + 1;
-            if(!win.contains(bonus)) { //포함되어 있지 않다면
+            if(!win.contains(bonus)) { //포함되어 있지 않다면 //contains()는 항목이 HashSet의 인스턴스에 있는지 여부를 확인하는 부울 메서드
                 return bonus;
             }
         }
