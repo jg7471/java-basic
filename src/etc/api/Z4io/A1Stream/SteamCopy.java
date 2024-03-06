@@ -8,8 +8,8 @@ import java.io.IOException;
 public class SteamCopy {
     public static void main(String[] args) {
 
-        try(FileOutputStream fos = new FileOutputStream("C:\\Users\\ICT4_15\\Desktop\\fileee\\xx.jpg");
-                 FileInputStream fis = new FileInputStream("C:\\Users\\ICT4_15\\Desktop\\fileee\\copy.jpg")) {///*내보내기 장소*/
+        try(FileOutputStream fos = new FileOutputStream("C:\\Users\\ICT4_15\\Desktop\\file\\JavaIO\\copy.jpg"); //2)복사한다
+                 FileInputStream fis = new FileInputStream("C:\\Users\\ICT4_15\\Desktop\\file\\JavaIO\\xx.jpg")) {//1)이미지 파일 원본을
 
             int data = 0;
             while (data != -1) {

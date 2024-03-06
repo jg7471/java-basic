@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArraysExample {
-//요 친구의 위치 @@@
+//요 친구의 위치 @@
     public static void main(String[] args) {
 
         char[] arr = {'J','A','V','A'};

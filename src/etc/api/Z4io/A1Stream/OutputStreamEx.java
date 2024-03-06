@@ -22,7 +22,7 @@ public class OutputStreamEx {
         FileOutputStream fos = null; //우선 널 값 주고 ,try에서 본격적으로 사용(finally에서 또 사용되어서(스코프))
 
         try { //
-            fos = new FileOutputStream("C:\\Users\\ICT4_15\\Desktop\\fileee" + fileName + ".txt"); //java.io 패키지 //핵심
+            fos = new FileOutputStream("C:\\Users\\ICT4_15\\Desktop\\file\\JavaIO" + fileName + ".txt"); //java.io 패키지 //핵심
 
             System.out.println("문장을 입력하세여");
             sc.nextLine(); //파일명 작성 후 엔터 때린거 처리(\n)
@@ -31,7 +31,7 @@ public class OutputStreamEx {
             byte[] arr = text.getBytes(); // 지역변수 : 문자열 데이터를 바이트 데이터로 변환 //핵심
             fos.write(arr); // 파일을 바이트 단위로 써 내림 //핵심
 
-            System.out.println("파일이 정상적으로 저장되었습니다.");
+            System.out.println("파일이 정상적으로 저장되었습니다.");//경로설정 한 곳에 txt파일 작성
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Utility {
 
-    public static final String FILE_PATH = "C:\\Users\\ICT4_15\\Desktop\\file\\music"; //상수(static final)로 설정
+    public static final String FILE_PATH = "C:\\Users\\ICT4_15\\Desktop\\file\\music"; //상수(static final)로 폴더 저장위치 설정
 
     static Scanner sc; //정적초기화아자 스캐너 + 라인
 

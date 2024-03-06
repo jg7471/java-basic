@@ -11,9 +11,9 @@ public class SaveSnack {
     public static void main(String[] args) {
         List<Snack> snackList = new ArrayList<>();
         Collections.addAll(snackList,
-                new Snack("콘칩", 1970, 1500, "Taste.good"),
-                new Snack("사브레", 1980, 2500, "Taste.bad"),
-                new Snack("오징어칩", 1985, 1800, "Taste.SOSO") //스낵객체 3개 생성 리스트에 등록
+                new Snack("콘칩", 1970, 1500, Snack.Taste.GOOD), //enum 등록
+                new Snack("사브레", 1980, 2500, Snack.Taste.BAD),
+                new Snack("오징어칩", 1985, 1800, Snack.Taste.SOSO) //스낵객체 3개 생성 리스트에 등록
         );
         System.out.println(snackList);
 

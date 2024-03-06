@@ -11,12 +11,12 @@ public class CreateFolder {
          - 생성자의 매개값으로 폴더를 생성할 경로 + 폴더명을 지정합니다.
          */
 
-        File file = new File("C:\\Users\\ICT4_15\\Desktop\\test");
-        if(!file.exists()){ //해당 디렉토리 경로가 조재한다면 true, 존재하지 않는다면 false //경로가 실제 존재하는 경로 인지 아닌지 boolean type으로 알려줌
+        File file = new File("C:\\Users\\ICT4_15\\Desktop\\file\\JavaIO\\Halou");
+        if (!file.exists()) { //해당 디렉토리 경로가 조재한다면 true, 존재하지 않는다면 false //경로가 실제 존재하는 경로 인지 아닌지 boolean type으로 알려줌
             //file.mkdir(); //리눅스랑 같다 //만들고자 하는 경로의 상위 디렉토리가 존재하지 않는다면 동작 X
             file.mkdirs(); //폴더 생성 -> 전부 다 만들어줌(경로 추가 가능)
             System.out.println("폴더 생성 완료");
-        }else{
+        } else {
             System.out.println("이미 존재하는 경로입니다");
         }
 
@@ -31,13 +31,12 @@ public class CreateFolder {
 
 
         //File file = new File("C:/MyWorkspace/folder_test"); //경로 동일
-//        if(file.exists()){ //폴더 지우기
-//            file.delete();
-//            System.out.println("삭제 완료");
-//        }else {
-//            System.out.println("삭제 실패 or 경로 존재 X");
-//        }
-
+        if(file.exists()){ //폴더 지우기
+            file.delete();
+            System.out.println("삭제 완료");
+        }else {
+            System.out.println("삭제 실패 or 경로에 존재 하지 않습니다");
+        }
 
 
     }
