@@ -43,7 +43,7 @@ public class A1HashSetExample {
          - set은 인덱스가 없기 떄문에 메서드를 이용해서 객체를 얻는게 아니라
           반복자 (Iterator)를 통해서 요소를 하나씩 꺼내 보셔야 합니다.
           반복자 객체는 set 인터페이스가 제공하는 iterator()를 호출하여
-          얻어옵니다.
+          얻어옵니다. -> 보통 iterator보다 iter 많이씀??@@@
         */
         Iterator<String> iter = set.iterator(); //iter 객체
         //String element = iter.next(); //element 지역변수
