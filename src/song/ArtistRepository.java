@@ -10,8 +10,8 @@ public class ArtistRepository {
     //Key 가수이름, value : Artist 객체,
     private static Map<String, Artist> artistList; //객체 생성없이(메소드만으로) 접근하게 static으로 but 직접 접근하지 못하게
 
-    static {
-        artistList = new HashMap<>();
+    static { //정적 초기화자 : 정적 멤버는 클래스에 고정된 멤버로, 객체를 생성하지 않고 사용할 수 있다.
+        artistList = new HashMap<>(); //외부에서 호출시 사용 : static이라 시작시 바로 초기화
     }
 
     public static Map<String, Artist> getArtistList() {//테스트용(잘 동작 되는지 테스트)
