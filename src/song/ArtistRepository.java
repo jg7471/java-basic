@@ -7,12 +7,19 @@ import java.util.*;
 
 public class ArtistRepository {
 
+
     //Key 가수이름, value : Artist 객체,
     private static Map<String, Artist> artistList; //객체 생성없이(메소드만으로) 접근하게 static으로 but 직접 접근하지 못하게
+    // Map<String, String> map = new HashMap<>(); //원랜 요렇게
+    //Key / Value
+    //private 클래스 내부에서만 사용
+    //static 객체 생성없이 사용 가능
 
+    ;//HashMap 중복을 허용하지 않고 순서를 보장하지 않는다
     static { //정적 초기화자 : 정적 멤버는 클래스에 고정된 멤버로, 객체를 생성하지 않고 사용할 수 있다.
         artistList = new HashMap<>(); //외부에서 호출시 사용 : static이라 시작시 바로 초기화
     }
+    //static 클래스에 인스턴스를 생성하지 않고도 사용할 수 있는 멤버이며, 클래스가 로딩될 때 초기화됩니다.
 
     public static Map<String, Artist> getArtistList() {//테스트용(잘 동작 되는지 테스트)
         return artistList;
@@ -21,11 +28,14 @@ public class ArtistRepository {
     //신규 가수를 map에 추가하는 기능
     public void addNewArtist(String artistName, String songName) {
         //1. 신규 가수 정보 생성 -> Set 객체 전달
-        Artist artist = new Artist(artistName, new HashSet<>()); //생성자 호출  //각 아티스트는 여러 곡을 가질 수 있습니다. 따라서 Artist 객체를 만들 때 아티스트의 곡 목록을 저장하기 위해 HashSet을 생성합니다.
+        Artist artist = new Artist(artistName, new HashSet<>()); //artist 객체 생성(Name, 두번째 빈 매개변수 hash)
+        // 각 아티스트는 여러 곡을 가질 수 있습니다.
+        // 따라서 Artist 객체를 만들 때 아티스트의 곡 목록을 저장하기 위해 HashSet을 생성합니다.
+
         //2. 생성된 노래 목록을 리턴받아서 노래 이름을 추가
         artist.getSongList().add(songName); //HashSet을 getSongList로 받고 호출
         //3. 완성된 객체를 Map에 저장
-        artistList.put(artistName, artist);
+        artistList.put(artistName, artist); //artistList : map, artist(Songlist)
     }
 
     //method 순서 상관X
@@ -49,16 +59,18 @@ public class ArtistRepository {
         //Map에서 기존 가수 객체부터 찾자
         Artist artist = artistList.get(artistName);//key값
         //Set의 add는 add의 실행 결과를 boolean으로 리턴-> 중복이 발생했다면 객체가 추가되지 않고 false를 리턴
-        boolean flag = artist.getSongList().add(songName);//add : boolean type 리턴 可 : 중복되면 false return : boolean 지역변수 삽입
+        boolean flag = artist.getSongList().add(songName);//add : boolean type 리턴 可 : 성공 true, 중복 false return : boolean 지역변수 삽입
         return flag;
     }
 
     //노래 목록을 찾아서 출력하는 기능
     public void showSongList(String artistName) { //이거 왜 ArtistView-> 여기로 생성된거지 @@@
-        Artist artist = artistList.get(artistName); //내가 작성
+        Artist artist = artistList.get(artistName); //artistList : map //get(인덱스) : 리스트 내부의 객체를 참조//내가 작성/
+        //artistList Map<String(가수이름 key), Artist(객체, value)>
         //System.out.println(artist); //내가 작성
-        Set<String> songList = artist.getSongList();
-        List<String> songs = new ArrayList<>(songList); //@@@ //'songList라는 컬렉션을 복사하여 새로운 ArrayList에 저장하는 코드입니다.
+
+        Set<String> songList = artist.getSongList(); //정렬X set<->ArrayList 전환 편함
+        List<String> songs = new ArrayList<>(songList); //배열과 유사한 형태 //'songList라는 컬렉션을 복사하여 새로운 ArrayList에 저장하는 코드입니다.
         //(songList) 생성자 호출 시에 사용되는 표현 //ArrayList 객체를 생성할 때 초기값으로 songList를 사용하겠다는 의미
         for (int i = 0; i < songs.size(); i++) {
             System.out.printf("* %d. %s\n", i + 1, songs.get(i));
