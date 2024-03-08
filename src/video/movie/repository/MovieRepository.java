@@ -12,9 +12,9 @@ import java.util.Map;
 import static video.common.Condition.*;
 
 public class MovieRepository {
-    private static final Map<Integer, Movie> movieDatabase = new HashMap<>();
+    private static final Map<Integer, Movie> movieDatabase = new HashMap<>(); //Hash Map으로 초기화 @@@
 
-    static {//정적 초기화자 : static map이 실행시 자동 insertTestMovieData 호출
+    static {//정적 초기화자 : static map이 실행시 자동 insertTestMovieData 호출  //@@@원래 요렇게 2번 정적초기화 하는게 정석???
         insertTestMovieData();
     }
 
@@ -32,8 +32,8 @@ public class MovieRepository {
         Movie movie9 = new Movie("쇼생크 탈출", "미국", 1995);
         Movie movie10 = new Movie("기생충", "대한민국", 2019);
 
-        movieDatabase.put(movie1.getSerialNumber(), movie1);
-        movieDatabase.put(movie2.getSerialNumber(), movie2);
+        movieDatabase.put(movie1.getSerialNumber(), movie1); //movieDatabase HashMap에 삽입(시리얼넘버, 제목)
+        movieDatabase.put(movie2.getSerialNumber(), movie2); //시리얼넘버 : getSerialNumber -> 생성자 this.serialNumber = ++movieSequence;
         movieDatabase.put(movie3.getSerialNumber(), movie3);
         movieDatabase.put(movie4.getSerialNumber(), movie4);
         movieDatabase.put(movie5.getSerialNumber(), movie5);
@@ -49,14 +49,14 @@ public class MovieRepository {
 
     }
 
-    public List<Movie> searchMovieList(Condition condition, String keyword) throws Exception {
+    public List<Movie> searchMovieList(Condition condition, String keyword) throws Exception { //@@@List<Movie> 정체 : Movie 객체가 모여있는 리스트
         if (condition == TITLE) { //import로 불러옴
             return searchByTitle(keyword);
 
         } else if (condition == NATION) {
             return searchByNation(keyword);
 
-        } else if (condition == Condition.PUB_YEAR) {
+        } else if (condition == Condition.PUB_YEAR) { //원형
             return searchByPubYear(keyword);
 
         } else {
@@ -64,11 +64,11 @@ public class MovieRepository {
         }
     }
 
-    private List<Movie> searchAll() {
+    private List<Movie> searchAll() { //이럴경우 뭐가 선택 되는거?-> 위에 보셈
         List<Movie> searchedList = new ArrayList<>();
 
-        for (int key : movieDatabase.keySet()) {
-            Movie movie = movieDatabase.get(key); //객체 하나씩 가져와서
+        for (int key : movieDatabase.keySet()) { //Map에서 key만 출력 (시리얼넘버, 제목)
+            Movie movie = movieDatabase.get(key); //객체 하나씩 가져와서 //Movie class?? @@@
             searchedList.add(movie); //리스트에 담겠다
 
         }
@@ -77,14 +77,14 @@ public class MovieRepository {
 
     //문자열을 숫자로 변환하는 과정에서 예외 발생 가능성이 있기 때문에 throws 추가
     private List<Movie> searchByPubYear(String keyword) throws NumberFormatException {//문자열 입력
-        List<Movie> searchedList = new ArrayList<>();
+        List<Movie> searchedList = new ArrayList<>(); //@@@ searchAll() else 리턴값 searchedList : static 아닌데 참조(지역변수)인데 다른 메소드가 참조 가능한가요??
 
         //입력값을 String으로 받았기 대문에 int로 변환해서 비교
-        int targetYear = Integer.parseInt(keyword);//문자열 오류 발생할 수도 있으니 예외 떠넘기기
+        int targetYear = Integer.parseInt(keyword);//List<Movie>Integer(문자열), -> Int(정수) //문자열 오류 발생할 수도 있으니 예외 떠넘기기
 
-        for (int key : movieDatabase.keySet()) {
+        for (int key : movieDatabase.keySet()) { //keySet : Map에서 Key들만 추출하는 메서드
             Movie movie = movieDatabase.get(key); //객체 하나씩 가져와서
-            if (movie.getPubYear() == targetYear) { //변환하여 비교
+            if (movie.getPubYear() == targetYear) { //변환하여 비교 getPubYear -> 생성자
                 searchedList.add(movie); //리스트에 담겠다
             }
         }
@@ -94,13 +94,13 @@ public class MovieRepository {
     //private List<Movie> searchMovieList(Condition condition, String keyword) {} //노필요?
 
 
-    private List<Movie> searchByNation(String keyword) {
+    private List<Movie> searchByNation(String keyword) { //리스트(List<Movie>) : Movie 객체가 모여있는 리스트
         List<Movie> searchedList = new ArrayList<>();
 
         for (int key : movieDatabase.keySet()) {
             Movie movie = movieDatabase.get(key); //객체 하나씩 가져와서
             if (movie.getNation().equals(keyword)) {
-                searchedList.add(movie); //리스트에 담겠다
+                searchedList.add(movie);
             }
         }
         return searchedList;
@@ -121,25 +121,26 @@ public class MovieRepository {
     }
 
     //내가 작성
-    public Movie deleteMovie(int delMovieNum) { //리턴하는거 이해
-
-        return movieDatabase.remove(delMovieNum);
+    public Movie deleteMovie(int delMovieNum) { //map의 Key
+        return movieDatabase.remove(delMovieNum); //return 출력문에 쓰려고
     }
 
     public List<Movie> searchByRental(boolean possible) { //possible : boolean 값
         List<Movie> searchedList = new ArrayList<>();
 
-        //if(possible == true){
-        if(possible){ //대여 가능한 Movie들만 거르기 //요렇게 쓰는게 더 깔끔
-            for (int key : movieDatabase.keySet()) {
+
+
+        //if(possible == true){ //지저분
+        if(possible){ //if possible이 true라면//대여 가능한 Movie들만 거르기 //요렇게 쓰는게 더 깔끔
+            for (int key : movieDatabase.keySet()) { //<Movie> map이라 key값만 받음// map for문 3단 콤보 Map에서 keySet : key 추출
                 Movie movie = movieDatabase.get(key);
-                if(!movie.isRental())//boolean 타입 //대여가능
+                if(!movie.isRental())//isRental false = 대여가능 //is boolean 타입 기본값 false!!!
                     searchedList.add(movie);
             }
         } else {
             for (int key : movieDatabase.keySet()) {
                 Movie movie = movieDatabase.get(key);
-                if(movie.isRental())//boolean 타입 //대여불가
+                if(movie.isRental())
                     searchedList.add(movie);
             }
         }

@@ -21,12 +21,13 @@ public class Movie {
         this.movieName = movieName;
         this.nation = nation;
         this.pubYear = pubYear;
-        this.charge = ChargePolicy.calculateDvdCharge(this); //@@@ //지금생성되는 this 주소값을 보내겠다
+        this.charge = ChargePolicy.calculateDvdCharge(this); //지금생성되는 this 주소값을 보내겠다
     }
 
     @Override
     public String toString() {
         String rental = this.rental ? "대여중" : "대여가능"; //rental 체크 //boolean  기본값 false = 대여가능 : 추가로 로직 안써도 됨
+        //this.rental true 대여중 false 대여가능
         return
                 "## DVD번호: " + serialNumber +
                         ", 영화명: " + movieName +
@@ -48,14 +49,17 @@ public class Movie {
         return movieName;
     }
 
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
-    }
+//    public void setMovieName(String movieName) {
+//        this.movieName = movieName;
+//    }
+//
+//    public String getNation() {
+//        return nation;
+//    }
 
     public String getNation() {
         return nation;
     }
-
     public void setNation(String nation) {
         this.nation = nation;
     }

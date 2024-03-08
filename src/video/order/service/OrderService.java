@@ -33,7 +33,7 @@ public class OrderService implements AppService {
                     showRentalPossibleList();
                     return;
                 case 3:
-//                    processReturnDVD();
+                    processReturnDVD();
 
                     return;
 
@@ -181,95 +181,95 @@ public class OrderService implements AppService {
     }
 
     //DVD 반납 서비스 비즈니스 로직
-//    private void processReturnDVD() {
-//        System.out.println("=======================반납 관리 시스템을 실행합니다.=======================");
-//        System.out.println("### 반납자의 이름을 입력하세요");
-//        String name = inputString(">>>");
-//
-//        List<User> users = userRepository.findUserByName(name);
-//        int count = users.size();
-//
-//        if (count > 0) {
-//            List<Integer> userNums = new ArrayList<>();
-//            System.out.printf("\n==================================== 검색 결과 (총 %d건) ====================================\n", count);
-//            for (User user : users) {
-//                System.out.println(user);
-//                userNums.add(user.getUserNumber());//몰래 몰래 넘버 넣는다
-//            }
-//            System.out.println("==========================================================================================");
-//
-//            System.out.println("### 반납자의 회원 번호를 입력하세요");
-//            int userNumber = inputInteger(">>>");
-//
-//            if (userNums.contains(userNumber)) {
-//                returnProcess(userNumber);
-//
-//            } else {
-//                System.out.println("\n### 조회된 회원 번호를 입력하세여 합니다.");
-//            }
-//
-//        } else {
-//            System.out.println("\n### 반납자의 정보가 없습니다.");
-//        }
-//
-//    }
+    private void processReturnDVD() {
+        System.out.println("=======================반납 관리 시스템을 실행합니다.=======================");
+        System.out.println("### 반납자의 이름을 입력하세요");
+        String name = inputString(">>>");
 
-//    private void returnProcess(int userNumber) {
-//        // 매개값으로 전달된 회원 번호를 통해 회원 객체를 받아야 한다.
-//        // "XXX 회원님의 대여 목록입니다" 라고 하면서 orderList 내의 모든 객체를 보여주어야 한다.
-//        // 반납할 DVD의 번호를 입력받아야 한다.
-//        // 입력한 번호가 대여중인 DVD인지 검증해야 한다. (아무 번호나 입력하지 않았는지 확인)
-//        // 대여중인 DVD가 맞다면 반납처리를 본격적으로 진행한다.
-//        // 영화 객체에서 회원정보를 삭제한다. -> rentalUser 필드 값을 null로 세팅
-//        // 영화 객체의 대여 가능 여부를 변경해야 한다.
-//        // 연체료 발생 여부를 확인하여 연체료가 존재한다면 추가로 얼마를 결제하라고 출력문을 띄워야 하고,
-//        // 연체료가 없다면 반납이 완료되었다는 출력문을 보여주어야 한다.
-//
-//        User returnUser = UserRepository.findUserByNumber(userNumber); // UserRepository.findUserByNumber(userNumber); 왜 오류??
-//        System.out.printf("\n### 현재 [%s] 회원님의 대여 목록입니다.\n", returnUser.getUserName());
-//        System.out.println("===============================================================");
-//        Map<Integer, Order> orderList = returnUser.getOrderList(); //대여한 목록 들어옴
-//        for (int ket : orderList.keySet()) { //Integer -> int 변환
-//            System.out.println(orderList.get(Key)); //이미 연체료 계산 1)
-//        }
-//        System.out.println("===============================================================");
-//        System.out.println("### 반납할 DVD의 번호를 입력하세요.");
-//        int returnMovieNumber = inputInteger(">>>");
-//
-//        if(orderList.containsKey(returnMovieNumber)) {//Map 영화번호 키가 존재함
-//            Movie returnMovie = movieRepository.searchByRental(returnMovieNumber); //movie 객체
-//            returnMovie.setRentalUser(null);
-//            returnMovie.setRental(false);//대여 가능?? : 확인 필요
-//
-//            Order returnOrder = orderList.get(returnMovieNumber); //order 객체
-//            //System.out.println(returnOrder); //2) 중복이라 지움 //toString을 호출해야 연체료가 계산된다 //(returnOrder.toString) 생략됨
-//            int overdueCharge = returnOrder.getOverdueCharge();
-//            if(overdueCharge > 0){
-//                System.out.printf("\n### 반납이 완료되었습니다. %d원을 추가로 결제해 주세요!\n", overdueCharge);
-//            }else{
-//                System.out.println("### 반납완료 ???");
-//            }
-//
-//        } else {
-//            System.out.println("\n### 해당 DVD는 반납 대상이 아닙니다.");
-//
-//        }
-//
-//
-//
-//        /*//내가 작성
-//        //List<User> users = userRepository.findUserByNumber(userNumber); //요건 왜 userNumber 추가가 안되는거 //List<User> 의미
-//        User rentalUser = userRepository.findUserByNumber(userNumber);
-//        System.out.printf("%s 회원님의 대여 목록 %s 입니다.", rentalUser, rentalProcess(userNumber);
-//        User rentalUser = movie.getRentalUser(); //userNumber.setSequence // 3번 유저가 Movie 정보 get 해야하는데
-//        users.remove(user);
-//        */
-//
-//
-//
-//
-//
-//
-//
-//    }
+        List<User> users = userRepository.findUserByName(name);
+        int count = users.size();
+
+        if (count > 0) {
+            List<Integer> userNums = new ArrayList<>();
+            System.out.printf("\n==================================== 검색 결과 (총 %d건) ====================================\n", count);
+            for (User user : users) {
+                System.out.println(user);
+                userNums.add(user.getUserNumber());//몰래 몰래 넘버 넣는다
+            }
+            System.out.println("==========================================================================================");
+
+            System.out.println("### 반납자의 회원 번호를 입력하세요");
+            int userNumber = inputInteger(">>>");
+
+            if (userNums.contains(userNumber)) {
+                returnProcess(userNumber);
+
+            } else {
+                System.out.println("\n### 조회된 회원 번호를 입력하세여 합니다.");
+            }
+
+        } else {
+            System.out.println("\n### 반납자의 정보가 없습니다.");
+        }
+
+    }
+
+    private void returnProcess(int userNumber) {
+        // 매개값으로 전달된 회원 번호를 통해 회원 객체를 받아야 한다.
+        // "XXX 회원님의 대여 목록입니다" 라고 하면서 orderList 내의 모든 객체를 보여주어야 한다.
+        // 반납할 DVD의 번호를 입력받아야 한다.
+        // 입력한 번호가 대여중인 DVD인지 검증해야 한다. (아무 번호나 입력하지 않았는지 확인)
+        // 대여중인 DVD가 맞다면 반납처리를 본격적으로 진행한다.
+        // 영화 객체에서 회원정보를 삭제한다. -> rentalUser 필드 값을 null로 세팅
+        // 영화 객체의 대여 가능 여부를 변경해야 한다.
+        // 연체료 발생 여부를 확인하여 연체료가 존재한다면 추가로 얼마를 결제하라고 출력문을 띄워야 하고,
+        // 연체료가 없다면 반납이 완료되었다는 출력문을 보여주어야 한다.
+
+        User returnUser = userRepository.findUserByNumber(userNumber); // UserRepository.findUserByNumber(userNumber); 왜 오류??
+        System.out.printf("\n### 현재 [%s] 회원님의 대여 목록입니다.\n", returnUser.getUserName());
+        System.out.println("===============================================================");
+        Map<Integer, Order> orderList = returnUser.getOrderList(); //대여한 목록 들어옴
+        for (int key : orderList.keySet()) { //Integer -> int 변환
+            System.out.println(orderList.get(key)); //이미 연체료 계산 1)
+        }
+        System.out.println("===============================================================");
+        System.out.println("### 반납할 DVD의 번호를 입력하세요.");
+        int returnMovieNumber = inputInteger(">>>");
+
+        if(orderList.containsKey(returnMovieNumber)) {//Map 영화번호 키가 존재함
+            Movie returnMovie = movieRepository.searchMovie(returnMovieNumber); //movie 객체
+            returnMovie.setRentalUser(null);
+            returnMovie.setRental(false);//대여 가능?? : 확인 필요
+
+            Order returnOrder = orderList.get(returnMovieNumber); //order 객체
+            //System.out.println(returnOrder); //2) 중복이라 지움 //toString을 호출해야 연체료가 계산된다 //(returnOrder.toString) 생략됨
+            int overdueCharge = returnOrder.getOverdueCharge();
+            if(overdueCharge > 0){
+                System.out.printf("\n### 반납이 완료되었습니다. %d원을 추가로 결제해 주세요!\n", overdueCharge);
+            }else{
+                System.out.println("### 반납완료 ???");
+            }
+
+        } else {
+            System.out.println("\n### 해당 DVD는 반납 대상이 아닙니다.");
+
+        }
+
+
+
+        /*//내가 작성
+        //List<User> users = userRepository.findUserByNumber(userNumber); //요건 왜 userNumber 추가가 안되는거 //List<User> 의미
+        User rentalUser = userRepository.findUserByNumber(userNumber);
+        System.out.printf("%s 회원님의 대여 목록 %s 입니다.", rentalUser, rentalProcess(userNumber);
+        User rentalUser = movie.getRentalUser(); //userNumber.setSequence // 3번 유저가 Movie 정보 get 해야하는데
+        users.remove(user);
+        */
+
+
+
+
+
+
+
+    }
 }

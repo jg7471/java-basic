@@ -10,7 +10,7 @@ public class ArtistView {
     //메인 실행 기능
     private static ArtistRepository ar; //정적초기화자 이용해 바로 객체 생성되도록 B03
     static {
-        ar = new ArtistRepository();
+        ar = new ArtistRepository(); //@@@ ar은 ArtistRepository
     }
 
 
@@ -93,10 +93,10 @@ public class ArtistView {
         } else //true 값 {
             //그렇다 -> 새로운 가수 정보를 생성하는 것이 아닌, 기존 가수 정보에서 노래만 추가
         {
-            boolean flag = ar.addNewSong(artistName, songName); // 잘 추가 true, 추가 안되면 false
-            if(!flag){
+            boolean flag = ar.addNewSong(artistName, songName); //false : 이미 등록됨/ true 추가됨 true
+            if(!flag) {//@@@flag = false 맞죠?
                 System.out.printf("\n# [%s]곡은 이미 등록된 노래입니다,\n", songName);
-            } else {
+            } else {//flag true
                 System.out.printf("\n# %s 가수의 노래목록에 %s 곡이 추가되었습니다.\n", artistName, songName);
             }
 
