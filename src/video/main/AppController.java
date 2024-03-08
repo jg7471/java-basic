@@ -29,11 +29,15 @@ public class AppController {
                 System.exit(0);
 
             default:
-                System.out.println("#메뉴를 다시 입력하세요");
+                System.out.println("#존재하지 않는 메뉴입니다.");
 
         }
 
-        service.start();//reurn1 끝
+        try { //8번 입력시 비정상 종료 -> 예외 처리
+            service.start();//reurn1 끝
+        } catch (Exception e) {
+            System.out.println("#메뉴를 다시 입력하세요");;
+        }
 
     }
 }

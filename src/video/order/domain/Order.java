@@ -1,6 +1,7 @@
 package video.order.domain;
 
 import video.movie.domain.Movie;
+import video.user.domain.OverduePolicy;
 import video.user.domain.User;
 
 import java.time.LocalDate;
@@ -12,12 +13,17 @@ public class Order {
     private LocalDate orderDate;
     private LocalDate returnDate;
 
+    private int overdueCharge; //연체료 계산 후 getter setter 추가해야함
+    private int overdueDay;
+
     //연체료 속성 추가해야 됨
 
 
     public Order(User user, Movie movie) { //Movie 클래스가져오기 안했음
         this.user = user;
         this.movie = movie;
+        this.orderDate = LocalDate.now(); //오늘 날짜 LocalDate.+메소드
+        this.returnDate = this.orderDate.plusDays(3); //3일 후
     }
 
     public User getUser() {
@@ -51,4 +57,40 @@ public class Order {
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
+
+
+    public int getOverdueCharge() {
+        return overdueCharge;
+    }
+
+    public void setOverdueCharge(int overdueCharge) {
+        this.overdueCharge = overdueCharge;
+    }
+
+    public int getOverdueDay() {
+        return overdueDay;
+    }
+
+    public void setOverdueDay(int overdueDay) {
+        this.overdueDay = overdueDay;
+    }
+
+
+    @Override
+    public String toString() {
+        this.overdueDay = OverduePolicy.calculateOverdueDay(this); //OverduePolicy 클래스의 calculateOverdueDay 메서드
+        this.overdueCharge = OverduePolicy.calculateOverdueCharge(this);
+        return
+                "## 대여영화번호: " + movie.getSerialNumber() +
+                        ", 대여영화명: " + movie.getMovieName() +
+                        ", 회원명: " + user.getUserName() + "(" + user.getPhoneNumber() + ")" +
+                        ", 대여일자: " + orderDate +
+                        ", 반납일자: " + returnDate +
+                        ", 연체금액(" + overdueDay + "일): "  + overdueCharge + "원"
+                ;
+    }
 }
+
+
+
+

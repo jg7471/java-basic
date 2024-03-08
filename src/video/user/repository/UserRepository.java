@@ -1,7 +1,11 @@
 package video.user.repository;
 
+import video.movie.domain.Movie;
+import video.order.domain.Order;
+import video.user.domain.Grade;
 import video.user.domain.User;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +20,26 @@ public class UserRepository {
     //마지막으로 final 키워드가 사용되어 변수의 값이 한 번 초기화되면 변경할 수 없도록 설정되었습니다.
 
 
+    /*
+    static{//테스트 유저
+        User test1 = new User("김테스트","010-1234-1234", Grade.BRONZE);
+        //public User(String userName, String phoneNumber, Grade grade) 생성자
+        userDatabase.put(test1.getUserNumber(), test1); //test1을 유저 데이터 베이스에 삽입
+        Movie testMovie = new Movie("테스트부미","테스트국가",2024); //레파스토리 삽입 ㄴㄴ
+        //영화는 데이터 리스트에 삽입 안함
+
+        Order testOrder = new Order(test1, testMovie);
+        testOrder.setOrderDate(LocalDate.of(2024,3,1));
+        testOrder.setReturnDate(LocalDate.of(2024,3,4));
+        test1.addOrder(testOrder);
+
+    }
+    */
+
+
+
     /*STATIC @@@???*/
+    //List<User> 어디서??? throw 빼먹음
     public List<User> findUserByName(String userName) { //리턴 타입(동명이인 전부 나오게=list 타입) //List<User>는 User 객체의 집합
         List<User> userList = new ArrayList<>();//배열과 다르게 크기가 자동으로 조절되는 자료구조 클래스
         //User 객체들을 저장하기 위한 동적 배열인 ArrayList를 생성하고, 이를 List 타입의 변수인 userList에 할당하는 코드
@@ -47,7 +70,8 @@ public class UserRepository {
         //key 손흥민 , - value 전화번호: 0102111111, 등급: BRONZE
     }
 
-    public User findUserByNumber(int userNumber) {
+    public User findUserByNumber(int userNumber) { //key@@@
         return userDatabase.get(userNumber);
+        //value 240308 1강 참조 @@@
     }
 }
