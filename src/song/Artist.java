@@ -16,8 +16,7 @@ public class Artist implements Serializable { //데이터 아티스트 객체 �
     private Set<String> songList; //노래목록 //Set 컬렉션은 저장 순서를 보장하지 않으며 객체의 중복 저장을 허용 X
 
     //기본 생성자 있는게 좋음
-
-    public Artist(String name, Set<String> songList) {
+    public Artist(String name, Set<String> songList) { //songList HashMap 입력 : 한가수 여러 곡
         this.name = name;
         this.songList = songList;
     }

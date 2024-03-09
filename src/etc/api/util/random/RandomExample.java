@@ -27,5 +27,6 @@ public class RandomExample {
         boolean b = r.nextBoolean();
         System.out.println("b = " + b);
 
+
     }
 }

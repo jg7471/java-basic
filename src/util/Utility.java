@@ -22,6 +22,5 @@ public class Utility {
     public static String input(String message){
         System.out.print(message);
         return sc.nextLine(); //공백포함 되어 있을 수도 있으니
-
     }
 }

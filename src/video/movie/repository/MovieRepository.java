@@ -12,9 +12,9 @@ import java.util.Map;
 import static video.common.Condition.*;
 
 public class MovieRepository {
-    private static final Map<Integer, Movie> movieDatabase = new HashMap<>(); //Hash Map으로 초기화 @@@
+    private static final Map<Integer, Movie> movieDatabase = new HashMap<>(); //Hash Map으로 초기화
 
-    static {//정적 초기화자 : static map이 실행시 자동 insertTestMovieData 호출  //@@@원래 요렇게 2번 정적초기화 하는게 정석???
+    static {//정적 초기화자 : static map이 실행시 자동 insertTestMovieData 호출
         insertTestMovieData();
     }
 
@@ -49,7 +49,8 @@ public class MovieRepository {
 
     }
 
-    public List<Movie> searchMovieList(Condition condition, String keyword) throws Exception { //@@@List<Movie> 정체 : Movie 객체가 모여있는 리스트
+    public List<Movie> searchMovieList(Condition condition, String keyword) throws Exception { //@@List<Movie> 정체 : Movie 객체가 모여있는 리스트 :
+        // -> 국적에 따른 영화 객체는 여러 개가 나올 수 있기 때문에 리스트의 제네릭을 Movie 타입으로 잡은 것입니다
         if (condition == TITLE) { //import로 불러옴
             return searchByTitle(keyword);
 
@@ -77,7 +78,7 @@ public class MovieRepository {
 
     //문자열을 숫자로 변환하는 과정에서 예외 발생 가능성이 있기 때문에 throws 추가
     private List<Movie> searchByPubYear(String keyword) throws NumberFormatException {//문자열 입력
-        List<Movie> searchedList = new ArrayList<>(); //@@@ searchAll() else 리턴값 searchedList : static 아닌데 참조(지역변수)인데 다른 메소드가 참조 가능한가요??
+        List<Movie> searchedList = new ArrayList<>(); //@@searchAll() else 리턴값 searchedList : static 아닌데 참조(지역변수)인데 다른 메소드가 참조 가능한가요?? -> 이름만 같고 서로 관계 X
 
         //입력값을 String으로 받았기 대문에 int로 변환해서 비교
         int targetYear = Integer.parseInt(keyword);//List<Movie>Integer(문자열), -> Int(정수) //문자열 오류 발생할 수도 있으니 예외 떠넘기기

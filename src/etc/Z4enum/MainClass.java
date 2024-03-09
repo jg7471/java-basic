@@ -33,7 +33,7 @@ public class MainClass {
 
         makeLine();
         //values(): 열거형 타입에 존재하는 모든 상수를 배열에 담아서 리턴.
-        Language[] values = Language.values();
+        Language[] values = Language.values(); //enum 배열 출력
         for (Language lang : values) {
             System.out.println(lang);
         }
