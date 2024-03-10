@@ -17,13 +17,13 @@ import static video.ui.AppUi.*;
 
 public class MovieService implements AppService { //ctrl O 오버라이딩 꼭!!!
 
-    private final MovieRepository movieRepository = new MovieRepository();
+    private final MovieRepository movieRepository = new MovieRepository(); //movieRepository 인스턴스 변수(객체의 속성(또는 상태)을 나타내는 변수)
 
 
     @Override
     public void start() {
         while (true) {
-            movieManagementScreen();
+            movieManagementScreen();//
             int selection = inputInteger(">>>");
 
             switch (selection) {
@@ -52,22 +52,23 @@ public class MovieService implements AppService { //ctrl O 오버라이딩 꼭!!
 
 
     private void insertMovieData() {
-        System.out.println("==== =영화 DVD 정보 추가합니다 =====");
+        System.out.println("===== 영화 DVD 정보 추가합니다 =====");
         String movieName = inputString("# 영화명 : ");
         String nation = inputString("# 국가명 : ");
-        int putYear = inputInteger("# 발며연도");
+        int putYear = inputInteger("# 발매연도");
 
         Movie newMovie = new Movie(movieName, nation, putYear);
-
         movieRepository.addMovie(newMovie);
+
         System.out.printf("### %s 정보가 정상적으로 차가됨", movieName);
     }
 
     //영화 검색 정보 출력
-    private void showSearchMovieData() {//넘기고 넘기고 넘겨서 여긴 void라 여기서 예외처리(다른 곳은 리턴 타입있어서) //!!!!!!!!!!throws Exception 외 다른 한곳 못함
-
+    private void showSearchMovieData() {// 영화검색조건
+        // 넘기고 넘기고 넘겨서 여긴 void라 여기서 예외처리(다른 곳은 리턴 타입있어서)
+        // !!!!!!!!!!throws Exception 외 다른 한곳 못함
         try {
-            List<Movie> movies = searchMovieData();
+            List<Movie> movies = searchMovieData(); //리턴값 movieRepository.searchMovieList(condition, keyword);
             int count = movies.size();
             if (count > 0) {
                 System.out.printf("\n======================================= 검색 결과(총 %d건) =======================================\n", count);
@@ -90,7 +91,8 @@ public class MovieService implements AppService { //ctrl O 오버라이딩 꼭!!
         System.out.println("[ 1. 제목검색 | 2. 국가검색 | 3. 발매연도검색 | 4. 전체검색 ]");
         int selection = inputInteger(">>>");
 
-        Condition condition = Condition.ALL;
+        Condition condition = Condition.ALL; // @@ 역할 : Condition 호출 : 기본값 All로 세팅(사용자가 검색 조건을 선택하지 않고 기본적으로 전체를 검색하게 하기 위함)
+
 
         switch (selection) {
             case 1:

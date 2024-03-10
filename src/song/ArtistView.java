@@ -10,7 +10,7 @@ public class ArtistView {
     //메인 실행 기능
     private static ArtistRepository ar; //정적초기화자 이용해 바로 객체 생성되도록 B03
     static {
-        ar = new ArtistRepository(); //@@@ ar은 ArtistRepository
+        ar = new ArtistRepository(); // ar은 ArtistRepository
     }
 
 

@@ -17,7 +17,7 @@ public class Movie {
     private User rentalUser; //현재 대여자 정보
 
     public Movie(String movieName, String nation, int pubYear) { //MovieService로 부터 전달 받겠다
-        this.serialNumber = ++movieSequence;
+        this.serialNumber = ++movieSequence; //세트
         this.movieName = movieName;
         this.nation = nation;
         this.pubYear = pubYear;
