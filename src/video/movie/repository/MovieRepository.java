@@ -45,6 +45,7 @@ public class MovieRepository {
         movieDatabase.put(movie10.getSerialNumber(), movie10);
     }
 
+
     public void addMovie(Movie movie) {
         movieDatabase.put(movie.getSerialNumber(), movie);
 
@@ -113,10 +114,9 @@ public class MovieRepository {
         return searchedList;
     }
 
-    private List<Movie> searchByTitle(String keyword) { //검색 결과를 List<Move>에 반환
-        //List<Movie> searchByTitle : return 값을 받으려고 @@@
-        List<Movie> searchedList = new ArrayList<>();
-        //List<Movie> searchedList : return값을 List<Movie>에 값을 주려고 @@@
+    private List<Movie> searchByTitle(String keyword) { //검색 결과를 List<Move>에 반환 //
+        List<Movie> searchedList = new ArrayList<>(); //List<Movie> searchByTitle  = searchedList = new ArrayList<>() <- List로 선언해서 arrayLIst linkedList 유연성 있음; // return 값을 받으려고 @@
+        //List<Movie> searchedList : return값을 List<Movie>에 값을 주려고 @@
 
         for (int key : movieDatabase.keySet()) {
             Movie movie = movieDatabase.get(key); //객체 하나씩 가져와서

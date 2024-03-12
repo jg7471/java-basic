@@ -9,12 +9,12 @@ public abstract class Pet { //이 아이는 추상클래스 입니다
       무조건 오버라이딩을 하도록 강요됩니다.
     */
 
-    // 공통 속성
+    // 공통 속성 필드 가능 : 인터페이스 불가
     private String name;
     private String kind;
     private int age;
 
-    //추상클래스에는 기본 생성자 X?@@@ - 틀 뿐이라서
+    //추상클래스에는 기본 생성자 가능 //인터페이스 불가 @@
 
 //생성자 alt insert 위에 속성 전부 클릭
     public Pet(String name, String kind, int age) {

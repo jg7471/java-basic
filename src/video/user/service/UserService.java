@@ -50,12 +50,12 @@ public class UserService implements AppService { //구현하고 추상메서드(
     private List<User> searchUser(){
         System.out.println("\n### 조회할 회원의 이름을 입력하세요.");
         String name = inputString(">>>");
-        return userRepository.findUserByName(name); //@@@ 소문자?
+        return userRepository.findUserByName(name); //@@ 소문자?
     }
 
 
 
-    //단손 조회결과 출력 //ctrl alt N ??? 아놔 @@@
+    //단손 조회결과 출력 //ctrl alt N ??? @@@
     private void showSearchUser() {
 
         List<User> users = searchUser();

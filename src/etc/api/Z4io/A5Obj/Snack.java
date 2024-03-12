@@ -18,7 +18,7 @@ public class Snack implements Serializable /*1번)*/ {
     private int price; //가격
     private Taste taste; //맛 //enum Taste 타입으로 변경해야 함
 
-    public Snack(String snackName, int year, int price, Taste taste/*enum Taste의 taste*/) {//생성자 생성 //@@@ 기본 생성자 언급한 부분
+    public Snack(String snackName, int year, int price, Taste taste/*enum Taste의 taste*/) {//생성자 생성 //@@ 기본 생성자 언급한 부분
         this.snackName = snackName;
         this.year = year;
         this.price = price;

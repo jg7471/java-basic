@@ -167,7 +167,7 @@ public class MovieService implements AppService { //ctrl O 오버라이딩 꼭!!
 }
 
 
-//    private void deleteMovieData() {//내가 작성
+    //private void deleteMovieData() {//내가 작성
 
         /*
         List<Movie> movies = new searchMovie<>();

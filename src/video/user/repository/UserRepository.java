@@ -38,7 +38,7 @@ public class UserRepository {
 
 
 
-    /*STATIC @@@???*/
+    /*STATIC @@???*/
     //List<User> 어디서??? throw 빼먹음
     public List<User> findUserByName(String userName) { //리턴 타입(동명이인 전부 나오게=list 타입) //List<User>는 User 객체의 집합
         List<User> userList = new ArrayList<>();//배열과 다르게 크기가 자동으로 조절되는 자료구조 클래스
@@ -65,13 +65,13 @@ public class UserRepository {
     //이름을 통해 회원 검색 : 동명이인이 있다면 모두 리턴하기 위해 List 리턴 타입 설정
 
     //회원 추가 기능
-    public void addUser(User user) { //@@@@변수 이름은 마음대로?
-        userDatabase.put(user.getUserNumber(), user); //유저에서 겟 넘버 꺼내서 유저로 등록 @@@
+    public void addUser(User user) { //@@변수 이름은 마음대로?
+        userDatabase.put(user.getUserNumber(), user); //유저에서 겟 넘버 꺼내서 유저로 등록 @@
         //key 손흥민 , - value 전화번호: 0102111111, 등급: BRONZE
     }
 
-    public User findUserByNumber(int userNumber) { //key@@@
+    public User findUserByNumber(int userNumber) { //key@@
         return userDatabase.get(userNumber);
-        //value 240308 1강 참조 @@@
+        //value 240308 1강 참조 인강 @@
     }
 }

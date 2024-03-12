@@ -114,7 +114,7 @@ public class A1HashSetExample {
           (HashSet -> HashCode를 통해 중복 여부를 확인하기 때문.)
          */
 
-        //인강 @@@ equals만 오버라이딩하고 hash 오버라이딩 하고 건들 필요 없는거죠?
+        //인강 @@ equals만 오버라이딩하고 hash 오버라이딩 하고 건들 필요 없는거죠?-> 안해도됨
         Set<Person> personSet = new HashSet<>(); //obj.Person; (java lang api) 객체 불러오기
         Person kim = new Person("김춘식",30);
         Person kim2 = new Person("김춘식",30);
