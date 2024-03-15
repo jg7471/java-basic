@@ -17,10 +17,10 @@ public class SubwayStaffRepository {
     }
 
     private static void insertStaffData(){
-        Staff staff1 = new Staff("Fujiko","Japan","Tokyo",030707,"Piano");
-        Staff staff2 = new Staff("Kimiko","Japan","Tokyo",041210,"English");
-        Staff staff3 = new Staff("Xuelin","China","Guangzhou",020417,"Drawing");
-        Staff staff4 = new Staff("Jeni","Hong Kong","Hong Kong",021110,"Drawing");
+        Staff staff1 = new Staff("Kim","Korea","Busan",1207);
+        Staff staff2 = new Staff("Shinji","Japan","Tokyo",1210);
+        Staff staff3 = new Staff("Lei","China","Guangzhou",1017);
+        Staff staff4 = new Staff("GEM","Hong Kong","HongKong",1110);
 
         staffDatabase.put(staff1.getSerialNumber(), staff1);
         staffDatabase.put(staff2.getSerialNumber(), staff2);

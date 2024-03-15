@@ -9,16 +9,16 @@ public class Staff {
     private String nation;
     private String hometown;
     private int birthDay;
-    private String hobby;
 
 
-    public Staff(String name, String nation, String hometown, int birthDay, String hobby) {
+
+    public Staff(String name, String nation, String hometown, int birthDay) {
         this.serialNumber = ++staffSequence;
         this.Name = name;
         this.nation = nation;
         this.hometown = hometown;
         this.birthDay = birthDay;
-        this.hobby = hobby;
+
 
 
     }
@@ -31,7 +31,6 @@ public class Staff {
                 ", nation='" + nation + '\'' +
                 ", hometown='" + hometown + '\'' +
                 ", birthDay=" + birthDay +
-                ", hobby='" + hobby + '\'' +
                 '}';
     }
 
@@ -75,13 +74,7 @@ public class Staff {
         this.birthDay = birthDay;
     }
 
-    public String getHobby() {
-        return hobby;
-    }
 
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
-    }
 
 
 
