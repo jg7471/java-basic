@@ -24,6 +24,11 @@ public class Utility {
         return sc.nextLine(); //공백포함 되어 있을 수도 있으니 //4) return값으로 sc.nextLine() <- 데이터 입력값 받음
     }
 
+    public static int numInput(int num){
+        System.out.print(num);
+        return sc.nextInt(); //nextInt로 수정
+    }
+
 
 
 

@@ -3,10 +3,12 @@ package Subway.service;
 import Subway.repository.SubwayStaffRepository;
 import util.Utility;
 
+import java.io.LineNumberInputStream;
 import java.security.PrivateKey;
 import java.util.List;
 
 import static Subway.repository.SubwayStaffRepository.searchStaffList;
+import static util.Utility.numInput;
 
 public class SubwayMenuService {
 
@@ -37,6 +39,7 @@ public class SubwayMenuService {
                     break;
 
                 case "2":
+                    selectMenu();
 
                     break;
 
@@ -62,9 +65,30 @@ public class SubwayMenuService {
 
     }
 
+
+
     public static void manageStaff() {
         System.out.println("현재 근무중 직원리스트");
         searchStaffList();
+    }
+
+    private static void selectMenu() {
+        System.out.println("메뉴를 선택하세요");
+        System.out.println("1. 매장에서 먹기 2. 포장하기");
+        int num = Utility.numInput(num);
+
+        switch(num){
+            case 1:
+            System.out.println("빵 크기를 선택하세요");
+
+            System.out.println("빵 종류를 선택하세요");
+
+
+
+
+
+        }
+
     }
 }
 
