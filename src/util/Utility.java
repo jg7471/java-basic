@@ -24,9 +24,8 @@ public class Utility {
         return sc.nextLine(); //공백포함 되어 있을 수도 있으니 //4) return값으로 sc.nextLine() <- 데이터 입력값 받음
     }
 
-    public static int numInput(int num){
-        System.out.print(num);
-        return sc.nextInt(); //nextInt로 수정
+    public static int numInput() {//numInput() 메서드는 정수를 반환해야 하므로 반환 타입을 int로 지정해야 합니다
+        return sc.nextInt();//nextInt로 수정 //static 선언
     }
 
 
