@@ -1,7 +1,9 @@
 package Subway.service;
 
+import Subway.domain.Menu;
 import Subway.repository.SubwayStaffRepository;
 
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,6 +15,7 @@ public class SubwayMenuService {
 
 
     private static SubwayStaffRepository ss;
+    private static ArrayList<Menu> list = new ArrayList<>();
 
     static {
         ss = new SubwayStaffRepository();
@@ -119,9 +122,6 @@ public class SubwayMenuService {
     }
 
 
-
-
-
 // 추가해야 할 기능
 //        System.out.println("빵 종류를 하세요");
 //        System.out.println("1. 화이트 2. 파마산 오레가노 3. 위트 4. 허니오트 5. 하티 6. 플랫브레드");
@@ -139,16 +139,16 @@ public class SubwayMenuService {
 //    }
 
 
-
     private static void makeVegetable() { //plan B
 
         //Collections 클래스로 직접 문자열을 저장하는 것은 불가능합니다
-        List<String> choiceVegetable = new ArrayList<>(9);
+
+        List<String> choiceVegetable = new ArrayList<>(); //★리스트 사이즈로 확인해야함 :리스트 크기 고정 X 계속 늘어남
         System.out.println("야채를 하세요(중복선택 가능)");
         System.out.println("0. 양상추, 1. 토마토, 2. 오이, 3. 피망, 4. 양파, 5. 피클, 6. 올리브, 7. 할라피뇨 8. 모든 야채 제외, 9. 선택완료");
 
         while (true) {
-            int num1 = numInput();
+            //int num1 = numInput(); 필요없음
             choiceVegetable.add("양상추");
             choiceVegetable.add("토마토");
             choiceVegetable.add("오이");
@@ -164,8 +164,13 @@ public class SubwayMenuService {
                 //★추가할 기능 : num1 중복시 다시 입력하는 기능
 
                 //System.out.println(choiceVegetable.add(choiceVegetable.get(num1))); // 선택한 값 추가
-                num1 = numInput();
-                int[] arry = new int[]{num1};
+                int num1 = numInput();
+                //int[] arry = new int[]{num1}; //리스트로변경
+
+
+                출처:
+                https:
+//xianeml.tistory.com/39 [미현 개발 TIL:티스토리]
 
                 //System.out.println(num1.get(i)); //num1은 int형이기 때문에 get() 메서드를 사용할 수 없습니다.
                 System.out.println("선택하신 메뉴: " + choiceVegetable.get(num1));
@@ -173,7 +178,8 @@ public class SubwayMenuService {
 
                 if (num1 == 9) {
                     System.out.println("선택을 완료 하셨습니다.");
-                    System.out.println("선택하신 메뉴: " + Arrays.toString(arry));
+                    //System.out.println("선택하신 메뉴: " + Arrays.toString(arry));
+                    System.out.println("toString() 전체 출력: " + choiceVegetable);
 
                     //★추가할 기능 : 선택완료시 메뉴 선택한거 전부 출력
 
@@ -190,6 +196,21 @@ public class SubwayMenuService {
 
             }
         }
+    }
+
+    private static void makeVegetable2() { //plan C
+        while (true) {
+            int veg = numInput();
+
+            for (Menu menu = list) {
+                menu.getVegetables()
+
+
+            }
+
+
+        }
+
     }
 
 
@@ -224,7 +245,6 @@ public class SubwayMenuService {
 //            }
 //        return choiceVegetable;
 //    }
-
 
 
 //    private List<String> makeSauce() {

@@ -4,10 +4,10 @@ public class Menu {
 
     private String bread;
     private String meats;
-    private String vegetables;
+    private int vegetables;
     private String sauce;
 
-    public Menu(String bread, String meats, String vegetables, String sauce) {
+    public Menu(String bread, String meats, int vegetables, String sauce) {
         this.bread = bread;
         this.meats = meats;
         this.vegetables = vegetables;
@@ -30,11 +30,11 @@ public class Menu {
         this.meats = meats;
     }
 
-    public String getVegetables() {
+    public int getVegetables() {
         return vegetables;
     }
 
-    public void setVegetables(String vegetables) {
+    public void setVegetables(int vegetables) {
         this.vegetables = vegetables;
     }
 
