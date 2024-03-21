@@ -4,14 +4,13 @@ import Subway.domain.Menu;
 import Subway.repository.SubwayStaffRepository;
 
 import java.lang.reflect.Member;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static Subway.repository.SubwayStaffRepository.searchStaffList;
 import static util.Utility.*;
 
 public class SubwayMenuService {
+    static Scanner scanner = new Scanner(System.in);
 
 
     private static SubwayStaffRepository ss;
@@ -37,6 +36,7 @@ public class SubwayMenuService {
 
             switch (choice) {
                 case 1:
+
                     manageStaff();
                     break;
 
@@ -122,61 +122,42 @@ public class SubwayMenuService {
     }
 
 
-// 추가해야 할 기능
-//        System.out.println("빵 종류를 하세요");
-//        System.out.println("1. 화이트 2. 파마산 오레가노 3. 위트 4. 허니오트 5. 하티 6. 플랫브레드");
-//        int num2 = numInput();
-//
-//        System.out.println("토스팅하시겠습니까?");
-//        boolean num3 = numInput();
-//
-//        System.out.println("치즈를 선택하세요");
-//        System.out.println("1. 아메리칸치즈, 2. 슈레드치즈 3. 모짜렐라치즈 4. 치즈제외");
-//        int num4 = numInput();
-//
-//        System.out.println("선택하신 메뉴입니다", num1, num2, num3, num4);
-//
-//    }
-
-
     private static void makeVegetable() { //plan B
 
         //Collections 클래스로 직접 문자열을 저장하는 것은 불가능합니다
 
+        Menu.refrigerator();
         List<String> choiceVegetable = new ArrayList<>(); //★리스트 사이즈로 확인해야함 :리스트 크기 고정 X 계속 늘어남
         System.out.println("야채를 하세요(중복선택 가능)");
         System.out.println("0. 양상추, 1. 토마토, 2. 오이, 3. 피망, 4. 양파, 5. 피클, 6. 올리브, 7. 할라피뇨 8. 모든 야채 제외, 9. 선택완료");
 
+
+
         while (true) {
             //int num1 = numInput(); 필요없음
-            choiceVegetable.add("양상추");
-            choiceVegetable.add("토마토");
-            choiceVegetable.add("오이");
-            choiceVegetable.add("피망");
-            choiceVegetable.add("양파");
-            choiceVegetable.add("피클");
-            choiceVegetable.add("올리브");
-            choiceVegetable.add("할라피뇨");
-            choiceVegetable.add("모든야채제외");
-            choiceVegetable.add("선택완료");
 
-            for (int i = 0; i < choiceVegetable.size(); i++) {
-                //★추가할 기능 : num1 중복시 다시 입력하는 기능
+            //★추가할 기능 : num1 중복시 다시 입력하는 기능
 
-                //System.out.println(choiceVegetable.add(choiceVegetable.get(num1))); // 선택한 값 추가
-                int num1 = numInput();
+            for (String value : choiceVegetable)
+
+
+            //System.out.println(choiceVegetable.add(choiceVegetable.get(num1))); // 선택한 값 추가
+            String input = scanner.next();
+            choiceVegetable.add(input);
+            for (String value : choiceVegetable) {
+                System.out.println(value);
+
+
                 //int[] arry = new int[]{num1}; //리스트로변경
 
 
-                출처:
-                https:
-//xianeml.tistory.com/39 [미현 개발 TIL:티스토리]
+
+                //xianeml.tistory.com/39 [미현 개발 TIL:티스토리]
 
                 //System.out.println(num1.get(i)); //num1은 int형이기 때문에 get() 메서드를 사용할 수 없습니다.
-                System.out.println("선택하신 메뉴: " + choiceVegetable.get(num1));
 
 
-                if (num1 == 9) {
+                if (Objects.equals(input, "9")) {
                     System.out.println("선택을 완료 하셨습니다.");
                     //System.out.println("선택하신 메뉴: " + Arrays.toString(arry));
                     System.out.println("toString() 전체 출력: " + choiceVegetable);
@@ -196,22 +177,23 @@ public class SubwayMenuService {
 
             }
         }
-    }
-
-    private static void makeVegetable2() { //plan C
-        while (true) {
-            int veg = numInput();
-
-            for (Menu menu = list) {
-                menu.getVegetables()
 
 
-            }
-
-
-        }
-
-    }
+        // 추가해야 할 기능
+//        System.out.println("빵 종류를 하세요");
+//        System.out.println("1. 화이트 2. 파마산 오레가노 3. 위트 4. 허니오트 5. 하티 6. 플랫브레드");
+//        int num2 = numInput();
+//
+//        System.out.println("토스팅하시겠습니까?");
+//        boolean num3 = numInput();
+//
+//        System.out.println("치즈를 선택하세요");
+//        System.out.println("1. 아메리칸치즈, 2. 슈레드치즈 3. 모짜렐라치즈 4. 치즈제외");
+//        int num4 = numInput();
+//
+//        System.out.println("선택하신 메뉴입니다", num1, num2, num3, num4);
+//
+//    }
 
 
 //@@ 질문 매개변수 입력은 왜 안되나요?
@@ -254,5 +236,6 @@ public class SubwayMenuService {
 //    }
 
 
+    }
 }
 

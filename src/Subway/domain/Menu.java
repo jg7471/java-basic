@@ -1,5 +1,8 @@
 package Subway.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Menu {
 
     private String bread;
@@ -13,6 +16,9 @@ public class Menu {
         this.vegetables = vegetables;
         this.sauce = sauce;
     }
+
+
+
 
     public String getBread() {
         return bread;
@@ -38,6 +44,21 @@ public class Menu {
         this.vegetables = vegetables;
     }
 
+    public static void refrigerator(){
+        List<String> vegRefrigerator = new ArrayList<>();
+        vegRefrigerator.add("0 양상추");
+        vegRefrigerator.add("1 토마토");
+        vegRefrigerator.add("2 오이");
+        vegRefrigerator.add("3 피망");
+        vegRefrigerator.add("4 양파");
+        vegRefrigerator.add("5 피클");
+        vegRefrigerator.add("6 올리브");
+        vegRefrigerator.add("7 할라피뇨");
+        vegRefrigerator.add("8 모든야채제외");
+        vegRefrigerator.add("9 선택완료");
+    }
+
+
     public String getSauce() {
         return sauce;
     }
@@ -45,6 +66,7 @@ public class Menu {
     public void setSauce(String sauce) {
         this.sauce = sauce;
     }
+
 
 
 }
